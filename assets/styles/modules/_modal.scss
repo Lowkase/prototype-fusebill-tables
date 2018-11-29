@@ -1,0 +1,154 @@
+// --------------------------------------------------------------------------------
+// MODULES - MODAL
+// --------------------------------------------------------------------------------
+.m-modal {
+	// Mask positioning
+	@include position(fixed, $top:0, $right:0, $bottom:0, $left:0);
+
+	// Mask styles
+	background-color: $color-black-opaque;
+	display: none;
+	height: 100%;
+	min-width: $fixed-min-width;
+	width: 100%;
+	z-index: $zi-modal;
+
+	> .con {
+		@include position(absolute, $top:0, $right:0, $bottom:0, $left:0);
+
+		background: $color-white;
+		box-shadow: $box-shadow-all;
+		height: 80%;
+		margin: auto;
+		width: 95%;
+		z-index: $zi-modal + $zi-plus-one;
+	}
+
+	> .con .t-wrp {
+
+		> .cls {
+			@include position(absolute, $top:$spacing-8, $right:$spacing-8);
+
+			cursor: pointer;
+			padding: $spacing-13;
+			z-index: $zi-modal + $zi-plus-one + $zi-plus-one;
+
+			svg {
+				cursor: pointer;
+				fill: $color-gray-900;
+				height: 12px;
+				width: 12px;
+			}			
+		}
+
+		> .hdr {
+			@include border-top-radius($template-border-radius);
+			@include font-size(1.125); // 18px
+			@include position(absolute, $top:0, $right:0, $left:0);
+
+			background: $color-white;
+			border-bottom: 1px solid $template-border-color;
+			color: $color-gray-900;
+			height: $fixed-header-height;
+
+			z-index: $zi-modal + $zi-plus-one;
+
+			.title {
+				font-weight: $font-weight-semibold;
+				padding: 19px $spacing-13;
+			}
+
+			.icon-title  {
+				@include j-cf();
+
+				padding: $spacing-13;
+				width: 95%;
+
+				svg {
+					fill: $color-gray-900;
+					float: left;
+					height: 30px;
+					margin-right: $spacing-8;
+					width: 30px;
+				}
+
+				span {
+					color: $color-gray-900;
+					float: left;
+					font-weight: $font-weight-semibold;
+					padding-top: $spacing-8;
+				}
+			}
+		}
+
+		> .bdy {
+			@include font-size(0.875); // 14px
+			@include position(absolute, $top:$fixed-header-height, $right:0, $bottom:$fixed-header-height, $left:0);
+
+			padding: $spacing-21;
+			overflow-y: auto;
+		}
+
+		> .ftr {
+			@include border-bottom-radius($template-border-radius);
+			@include position(absolute, $right:0, $bottom:0, $left:0);
+
+			border-top: 1px solid $template-border-color;
+			height: $fixed-header-height;
+			padding: $spacing-13;
+		}
+
+	}
+}
+
+
+.m-modal-size-large {
+	> .con {
+		height: 80%;
+		width: 95%;
+	}
+}
+
+.m-modal-size-medium {
+	> .con {
+		height: 60%;
+		width: 70%;
+	}
+}	
+
+.m-modal-size-small {
+	> .con {
+		height: 30%;
+		width: 60%;
+
+		 @media (max-width: 768px) {
+		 	height: 300px;
+		 	margin: 10% auto 0 auto;
+		 	width: 95%;
+		 }
+	}
+}
+
+.m-modal-size-frequency {
+	> .con {
+		height: 50%;
+		width: 60%;
+
+		 @media (max-width: 768px) {
+		 	height: 95%;
+		 	width: 95%;
+		 }
+	}
+}
+
+.m-modal-size-varies {
+	> .con {
+		height: 50%;
+		width: 60%;
+
+		 @media (max-width: 768px) {
+		 	height: 95%;
+		 	width: 95%;
+		 }
+	}
+}

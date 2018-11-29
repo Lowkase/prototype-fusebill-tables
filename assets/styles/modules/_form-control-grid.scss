@@ -1,0 +1,43 @@
+﻿// --------------------------------------------------------------------------------
+// MODULES - FORM CONTROL GRID
+// --------------------------------------------------------------------------------
+
+// BASE
+.m-form-grid {
+    background: $color-white;
+    margin-bottom: 0 0 $spacing-21 0;
+    padding: 0;
+    position: relative;
+
+    input, select, textarea {
+        width: 100%;
+    }
+    input[type=radio],input[type=checkbox] {
+        width: auto;
+    }
+}
+
+// ROW
+.m-form-grid-row {
+    @include j-cf();
+}
+
+// CELL DEFINITIONS
+.m-form-grid-50 {
+    @include j-column(6/12);
+}
+.m-form-grid-100 {
+    width: 100%;
+}
+
+// EXAMPLE
+/*
+    <div class="m-form-grid">
+        <div class="m-form-grid-row">
+            <div class="m-form-grid-50">
+            </div>
+            <div class="m-form-grid-50">
+            </div>
+        </div>
+    </div>
+*/

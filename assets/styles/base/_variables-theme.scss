@@ -1,0 +1,94 @@
+// --------------------------------------------------------------------------------
+// VARIABLES - TEMPLATE
+// --------------------------------------------------------------------------------
+
+	// FONTS
+    // --------------------------------------------------------------------------------
+	$template-font: 											'Open Sans', sans-serif;
+	$template-font-color:										$color-gray-900;
+	$template-font-weight: 										$font-weight-regular;
+
+
+	// BORDERS
+    // --------------------------------------------------------------------------------
+	$template-border-color: 									$color-gray-100;
+	$template-border-radius: 									3px;
+
+
+	// LABELS
+    // --------------------------------------------------------------------------------
+	$template-label-font-color:                 				$color-gray-600;
+	$template-label-font-weight:                				$font-weight-semibold;
+
+
+    // BUTTONS / ACTIONS
+    // --------------------------------------------------------------------------------
+    $template-button-disabled: 					            	$color-gray-200;
+    $template-button-disabled-font-color:                   	$color-gray-900;
+
+    $template-button-neutral: 					            	$color-gray-50;
+    $template-button-neutral-font-color:                    	$color-gray-900;
+    $template-button-neutral-hover: 				        	$color-gray-100;
+    $template-button-neutral-hover-font-color:              	$color-gray-900;
+
+    $template-button-primary: 					            	$color-blue;
+    $template-button-primary-font-color:                    	$color-white;
+    $template-button-primary-hover: 				        	$color-blue-hover;
+    $template-button-primary-hover-font-color:              	$color-white;
+
+
+	// GENERIC HEADER - CARDS / MODALS / TABLES
+	// --------------------------------------------------------------------------------
+	$template-generic-header-background:              			$color-gray-50;
+	$template-generic-header-font-color: 						$color-gray-900;
+	$template-generic-header-font-weight:             			$font-weight-regular;
+
+
+
+
+// --------------------------------------------------------------------------------
+// VARIABLES - LAYOUT
+// --------------------------------------------------------------------------------
+
+	// HEADER
+	// --------------------------------------------------------------------------------
+	$header-background:											$color-white;
+	$header-height:												67px;
+
+	// HEADER
+	// --------------------------------------------------------------------------------
+	$subheader-background:										$color-white;
+	$subheader-height:											112px;
+
+
+	// CONTENT
+	// --------------------------------------------------------------------------------
+	$content-bg:												$color-gray-75;
+	$content-font: 												$template-font-color;
+
+
+	// BODY
+	// --------------------------------------------------------------------------------
+	// This setting ensures the footer color is persisted if the content of the page does not fill the viewport
+	$template-background: 										$color-white;
+
+
+
+
+// --------------------------------------------------------------------------------
+// VARIABLES - MODULES
+// --------------------------------------------------------------------------------
+
+
+	// LOADING
+	// --------------------------------------------------------------------------------
+	$m-loading-spinner-color:              						$template-button-primary;
+
+
+// --------------------------------------------------------------------------------
+// VARIABLES - VIEWS
+// --------------------------------------------------------------------------------
+
+
+
+

@@ -1,0 +1,54 @@
+// --------------------------------------------------------------------------------
+// MODULES - NOTIFICATIONS
+// --------------------------------------------------------------------------------
+.m-notifications {
+    @include font-size(0.8750); // 14px
+    @include position(fixed, $top: 0, $right: -300px);
+    @include transition(right $transition-timer-400ms $transition-easeInOutQuad);
+    
+    height: auto;
+    width: 300px;
+    z-index: $zi-notificaiton;
+
+    .m-notification {
+        background: $color-white;
+        padding: $spacing-13;
+
+	    .m-notification-cls {
+		    @include position(absolute, $top:$spacing-8, $right:$spacing-8);
+
+		    cursor: pointer;
+		    padding: $spacing-3;
+		    z-index: $zi-notificaiton + $zi-plus-one + $zi-plus-one;
+
+		    svg {
+			    cursor: pointer;
+			    fill: $color-white;
+			    height: 12px;
+			    width: 12px;
+		    }			
+	    }
+
+        .message {
+            color: $color-white;
+            padding-right: $spacing-21;
+        }
+
+        &.error {
+            background: $color-red;
+        }
+
+        &.success {
+            background: $color-green;
+        }
+    }
+}
+
+// EXAMPLE
+/*
+    <div class="m-notifications">
+        <div class="m-notification error">
+            <div class="message">Your payment method was rejected.</div>
+        </div>
+    </div>
+*/

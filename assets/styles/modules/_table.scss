@@ -1,0 +1,162 @@
+﻿// --------------------------------------------------------------------------------
+// MODULE - TABLE  
+// --------------------------------------------------------------------------------
+$m-table-header-height: 53px;
+$m-table-border-color: $color-gray-200;
+
+
+.m-table {
+    @include font-size(0.8125); // 13px
+
+    background: $color-white;
+    line-height: 1.4;
+
+    label, select {
+        @include font-size(0.8125); // 13px
+    }
+
+
+    .m-table-header {
+        border: 1px solid $m-table-border-color;
+        border-bottom: 0;
+        height: $m-table-header-height;
+
+        .default-section {
+            .lft {
+                @include j-column(8/12);
+            }
+
+            .rgt {
+                @include j-column(4/12);
+            }
+
+            .lft, .rgt {
+                @include j-cf();
+
+                > div > div {
+                    @include j-cf();
+    
+                    cursor: pointer;
+                    height: $m-table-header-height - 1;
+                    padding: $spacing-8 $spacing-21;
+
+                    svg, > div {
+                        display: block;
+                        float: left;
+                    }
+
+                    svg {
+                        fill: $color-blue;
+                        height: $spacing-13;
+                        margin: $spacing-13 $spacing-8 0 0;
+                        width: $spacing-13;
+                    }                    
+
+                    .label {
+                        padding-top: 10px
+                    }
+                }
+
+                > div > div.hover-highlight:hover, .active {
+                    color: $color-white;
+                    background: $color-blue;
+
+                    svg {
+                        fill: $color-white;
+                    }
+                }
+            }
+
+            .lft > div > div {
+                border-right: 1px solid $m-table-border-color;
+                float: left;
+            }
+
+            .rgt > div > div {
+                border-left: 1px solid $m-table-border-color;
+                float: right;
+            }
+        }
+    }
+    .m-table-header-no-header {
+        height: 0;
+    }
+
+
+    table {
+        border: 1px solid $m-table-border-color;
+        border-bottom: 0;
+        width: 100%;
+
+        th, td {
+            border-bottom: 1px solid $m-table-border-color;
+            border-right: 1px solid $m-table-border-color;
+            padding: $spacing-8;
+            text-align: left;
+            vertical-align: top;
+        }
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+
+        th {
+            @include j-cf();
+
+            background: $color-gray-25;
+
+            .name {
+                float: left;
+                margin-right: $spacing-5;
+            }
+
+            .sort {
+                float: left;
+
+                svg {
+                    cursor: pointer;
+                    height: 11px;
+                    width: 11px;
+                }
+            }
+        }
+
+        .m-table-actions {
+            text-align: center;
+            
+            svg {
+                cursor: pointer;
+                display: inline-block;
+                fill: $color-blue;
+                height: 15px;
+                width: 15px;
+            }            
+        }
+    }
+
+    .m-table-footer {
+        border: 1px solid $m-table-border-color;
+        border-top: 0;
+        padding: $spacing-8;
+    }
+
+
+
+
+    // STATES
+    // --------------------------------------------------------------------------------
+    .m-table-align-center {
+        text-align: center;
+    }
+
+    .m-table-align-right {
+        text-align: right;
+    }
+
+    .m-table-edit {
+        color: $color-blue;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+
+}

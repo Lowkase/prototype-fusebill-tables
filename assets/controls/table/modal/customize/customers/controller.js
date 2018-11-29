@@ -1,0 +1,1 @@
+var customizeControlInit = gridDataCustomersSettings[0].customizeControl;

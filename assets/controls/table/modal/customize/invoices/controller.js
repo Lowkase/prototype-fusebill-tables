@@ -1,0 +1,1 @@
+var customizeControlInit = gridDataInvoicesSettings[0].customizeControl;

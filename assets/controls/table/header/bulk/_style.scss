@@ -1,0 +1,55 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - BULK
+// --------------------------------------------------------------------------------
+.m-table-bulk {
+    @include j-cf();
+
+    background: $color-blue;
+    color: $color-white;
+    display: none;
+    font-weight: $font-weight-semibold;
+    height: 53px;
+    position: relative;
+
+    .arrow {
+        @include position(absolute, $bottom: -4px, $left: 11px);
+        @include rounded-diamond(left, 13px, 45deg, $color-blue, 0px, transparent, 0px)
+    }
+
+    .close {
+        @include position(absolute, $top:17px, $right:$spacing-13);
+
+        svg {
+            cursor: pointer;
+            fill: $color-white;
+            height: 12px;
+            width: 12px;
+        }
+    }
+
+    .count {
+        @include j-column(2/12);
+
+        padding: 16px 0 0 $spacing-13 ;
+    }
+    
+    .actions {
+        @include j-column(10/12);
+
+        padding: 16px $spacing-55 0 0;
+    }
+
+    .bulk-actions {
+        @include j-cf();
+
+        > div {
+            cursor: pointer;
+            float: right;
+            margin-left: $spacing-21;
+        }
+        > div:hover {
+            text-decoration: underline;
+        }
+
+    }
+}

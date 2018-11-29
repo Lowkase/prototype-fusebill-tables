@@ -1,0 +1,22 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - STATUS
+// --------------------------------------------------------------------------------
+.m-table-status {
+	text-align: center !important;
+
+    &.m-table-status-green {
+        background: #C8E6C9;
+    }
+
+    &.m-table-status-red {
+        background: #FFCDD2;
+    }
+
+    &.m-table-status-yellow {
+        background: #FFF9C4;
+    }
+
+    &.m-table-status-blue {
+        background: #BBDEFB;
+    }
+}

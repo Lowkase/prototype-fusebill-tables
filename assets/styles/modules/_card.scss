@@ -1,0 +1,67 @@
+﻿// --------------------------------------------------------------------------------
+// MODULES - CARD
+// --------------------------------------------------------------------------------
+.m-card {
+    @include transition (all $transition-timer-400ms $transition-easeInOutQuad);
+
+    background: $fixed-card-bg;
+    box-shadow: $box-shadow-right-bottom;
+    margin-bottom: $spacing-21;
+
+    .m-card-hdr {
+        @include font-size(1.125); // 18px
+        @incluce j-cf();
+        
+        background: $template-generic-header-background;
+        color: $template-generic-header-font-color;
+        border-bottom: 1px solid $template-border-color;
+        font-weight: $template-generic-header-font-weight;
+        height: $fixed-card-header-height;
+        padding: $spacing-8 $spacing-8;
+
+        .icon {
+            float: left;
+            margin-right: $spacing-5;
+            margin-top: $spacing-5;
+
+            svg {
+                height: $fixed-card-header-icon-height-width;
+                width: $fixed-card-header-icon-width-width;
+            }  
+        }
+
+        .title {
+            @include text-truncate();
+
+            line-height: 26px;
+            float: left;
+            width: 60%;
+        }
+    }
+
+    .m-card-bdy {
+        padding: $spacing-13;
+    }
+
+    .m-card-bdy-no-padding {
+        padding: 0;
+    }
+}
+
+
+// EXAMPLE
+/*
+    <!-- CARD - START -->
+    <div class="m-card">
+        <div class="m-card-hdr">
+            <div class="icon">
+                -- SVG ELEMENT -->
+            </div>
+            <div class="title">CARD_TITLE</div>
+        </div>
+        <div class="m-card-bdy">
+            CARD_BODY WITH PADDING
+        </div>
+    </div>
+    <!-- CARD - END-->
+*/

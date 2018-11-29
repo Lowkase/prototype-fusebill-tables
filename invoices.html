@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>
+	        Tables - Invoices
+	    </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="assets/styles/style.css">
+	</head>
+    <body>
+
+
+        <!-- MODAL TABLE MASK -->
+        <div id="modal-table-mask" class="m-table-modal-mask"></div>
+
+
+
+
+    	<!-- HEADER -->
+    	<header id="t-header" class="t-header"></header>
+
+        <!-- SUBHEADER -->
+        <header id="t-subheader" class="t-subheader"></header>
+
+		<!-- CONTENT -->
+    	<div id="t-content" class="t-content v-select"></div>
+
+
+
+
+		<!-- LIBS -->
+		<script src="/assets/libs/jquery/jquery-3.3.1.min.js"></script>
+
+		<!-- DATA -->
+		<script src="/assets/data/data.js"></script>
+
+		<!-- VIEW CONTROLLERS -->
+		<script src="/assets/views/template/template.js"></script>
+		<script src="/assets/views/invoices/controller.js"></script>
+
+		<!-- TABLE CONTROLLERS -->
+		<script src="/assets/controls/table/init.js"></script>
+		<script src="/assets/controls/table/header/bulk/controller.js"></script>
+		<script src="/assets/controls/table/modal/helper.js"></script>
+		<script src="/assets/controls/table/modal/actions/controller.js"></script>
+		<script src="/assets/controls/table/modal/customize/invoices/controller.js"></script>
+		<script src="/assets/controls/table/modal/customize/controller.js"></script>
+		<script src="/assets/controls/table/modal/export/controller.js"></script>
+		<script src="/assets/controls/table/modal/search/customers/controller.js"></script>
+		<script src="/assets/controls/table/pagination/controller.js"></script>
+		<script src="/assets/controls/table/row/expand/controller.js"></script>
+		<script src="/assets/controls/table/row/inline-edit/controller.js"></script>
+
+
+
+
+		<!-- INIT -->
+		<script>
+            $(document).ready(function() {
+
+            	// HEADER
+				$( "#t-header" ).load( "/assets/views/template/header.html", function() {
+
+				});
+
+                // SUBHEADER
+                $( "#t-subheader" ).load( "/assets/views/template/subheader.html", function() {
+                    subheaderSetTitles("TABLES", "Fusebill Admin Tables Prototype");
+                });
+
+            	// CONTENT
+				$( "#t-content" ).load( "/assets/views/invoices/view.html", function() {
+					initInvoices("invoices-grid");
+				});
+
+            });
+        </script>
+
+
+	</body>
+</html>

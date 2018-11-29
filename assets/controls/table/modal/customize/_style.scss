@@ -1,0 +1,36 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - MODAL - CUSTOMIZE
+// --------------------------------------------------------------------------------
+.m-table-modal-customize  {
+    > .con {
+        height: 400px;
+        width: 320px;
+    }
+
+    > .con .t-wrp {
+        > .bdy {
+
+            .description {
+                margin-bottom: $spacing-13;
+            }
+
+            .columns {
+                > div {
+                    @include j-cf();
+
+                    margin-bottom: $spacing-8;
+
+                    input, div {
+                        display: block;
+                        float: left;
+                    }
+
+                    input {
+                        margin-right: $spacing-13;
+                    }
+                }
+            }
+
+        }
+    }
+}

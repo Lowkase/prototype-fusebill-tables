@@ -1,0 +1,166 @@
+// --------------------------------------------------------------------------------
+// VARIABLES - FIXED
+// CANNOT BE MODIFIED BY USER					      				  
+// --------------------------------------------------------------------------------
+
+// COLORS
+// --------------------------------------------------------------------------------
+$color-transparent: 								transparent;
+$color-white: 										#FFFFFF;
+$color-white-opaque: 					 			rgba(255,255,255,0.75);
+$color-gray-25: 									#f5f6f7; // approximate - used for table zebra stripping
+$color-gray-50: 									#ECEFF1; // material design - blue-gray - 50
+$color-gray-75: 									#E0E2E4; // approximate - used for table hover
+$color-gray-100: 									#CFD8DC; // material design - blue-gray - 100
+$color-gray-200: 									#B0BEC5; // material design - blue-gray - 200
+$color-gray-300: 									#90A4AE; // material design - blue-gray - 300
+$color-gray-400:									#78909C; // material design - blue-gray - 400
+$color-gray-500:									#607D8B; // material design - blue-gray - 500
+$color-gray-600:									#546E7A; // material design - blue-gray - 600
+$color-gray-700:									#455A64; // material design - blue-gray - 700
+$color-gray-800:									#37474F; // material design - blue-gray - 800
+$color-gray-900:									#263238; // material design - blue-gray - 900
+$color-gray-1000: 									#141b1e; // approximate material design
+$color-black: 										#000000;
+$color-black-opaque: 					 			rgba(200,200,200,0.6);
+$color-black-opaque-dark:				 			rgba(50,50,50,0.75);
+$color-green: 										#4CAF50; // material design - green - 600
+$color-green-hover: 								#388E3C; // material design - green - 700
+$color-red: 										#E53935; // material design - red - 600
+$color-red-hover: 									#D32F2F; // material design - red - 700
+$color-purple:                              		#9c27b0; // material design - purple - 500
+$color-yellow: 										#FDD835; // material design - yellow - 600
+
+
+// COLOR ABSTRACTION - BASE THEME
+// Base theme values will be overridden by the user settings 
+// --------------------------------------------------------------------------------
+$color-orange: 										#F57C00; // material design - orange - 600 (style guide default - #F6851F)
+$color-orange-hover:								#EF6C00; // material design - orange - 700
+$color-blue: 										#039BE5; // material design - lightblue - 600
+$color-blue-hover: 									#0288D1; // material design - lightblue - 700
+
+
+// FONTS
+// --------------------------------------------------------------------------------
+$font-weight-light:                         		300;
+$font-weight-regular:                       		400;
+$font-weight-semibold:                      		600;
+$font-weight-extrabold:                     		800;
+
+$font-size:                           				16px;
+// @include font-size(0.6250); // 10px
+// @include font-size(0.6875); // 11px
+// @include font-size(0.7500); // 12px
+// @include font-size(0.8125); // 13px
+// @include font-size(0.8750); // 14px
+// @include font-size(1.0000); // 16px
+// @include font-size(1.1250); // 18px
+// @include font-size(1.2500); // 20px
+// @include font-size(1.5000); // 24px
+// @include font-size(2.2500); // 36px
+// @include font-size(3.0000); // 48px
+// @include font-size(4.0000); // 64px
+// @include font-size(4.5000); // 72px
+
+
+// SPACING
+// --------------------------------------------------------------------------------
+$spacing-1: 										1px;
+$spacing-2: 										2px;
+$spacing-3: 										3px;
+$spacing-5:											5px;
+$spacing-8: 										8px;
+$spacing-13: 										13px;
+$spacing-21:										21px;
+$spacing-34: 										34px;
+$spacing-55: 										55px;
+$spacing-89:										89px;
+$spacing-144: 										144px;
+
+
+// Z-INDEX
+// --------------------------------------------------------------------------------
+$zi-plus-one:										1;
+$zi-modal: 											9;
+$zi-notificaiton:                           		99;
+
+
+// BOX SHADOW
+// --------------------------------------------------------------------------------
+$box-shadow-right-bottom: 							0px 2px 5px  0px rgba(0, 0, 0, 0.15),  0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+$box-shadow-right-bottom-light: 					0px 2px 5px  0px rgba(0, 0, 0, 0.075), 0px 2px 10px 0px rgba(0, 0, 0, 0.075);
+$box-shadow-all: 									0px 0px 30px 0px rgba(0, 0, 0, 0.40);
+$box-shadow-all-light:								0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+
+
+// TRANSITIONS TIMERS
+// --------------------------------------------------------------------------------
+$transition-timer-400ms: 							.4s;
+
+
+// EASING
+// --------------------------------------------------------------------------------
+$transition-easeInOutQuad:  						cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+
+// BREAKPOINTS
+// --------------------------------------------------------------------------------
+$bp-smart:     										'max-width: 320px';
+$bp-smart-tablet:     								'max-width: 600px';
+$bp-tablet:          								'max-width: 768px';
+$bp-tablet-landscape:								'min-width: 1024px';
+$bp-desktop:                        				'min-width: 1280px';
+
+
+// TEMPLATE
+// --------------------------------------------------------------------------------
+$fixed-input-height: 								36px;
+$fixed-min-height:									480px;
+$fixed-min-width:									1030px;
+
+
+// HEADER
+// --------------------------------------------------------------------------------
+$fixed-header-logo-height: 							36px;
+$fixed-header-logo-width: 							auto;
+
+
+// NAV
+// --------------------------------------------------------------------------------
+$fixed-nav-height-desktop: 							100px;
+$fixed-nav-height-mobile: 							90px;
+
+
+// CONFIGURE
+// --------------------------------------------------------------------------------
+$fixed-configure-include-control-height:			40px;
+$fixed-configure-include-control-width:				40px;
+
+
+// CONTENT
+// --------------------------------------------------------------------------------
+$fixed-content-min-height: 							600px;
+
+
+// CARD
+// --------------------------------------------------------------------------------
+$fixed-card-header-height:            				43px;
+$fixed-card-min-height:                     		190px;
+$fixed-card-bg:                             		$color-white;
+$fixed-card-header-icon-height-width:       		18px;
+$fixed-card-header-icon-width-width:        		18px;
+
+
+// MODAL
+// --------------------------------------------------------------------------------
+$fixed-header-height: 58px;
+
+
+// TABLE
+// --------------------------------------------------------------------------------
+$fixed-table-background-color:              		$color-white;
+$fixed-table-row-height:                    		40px;
+$fixed-table-text-line-height:              		25px;
+$fixed-table-actions-height:                		54px;
+

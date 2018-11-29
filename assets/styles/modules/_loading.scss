@@ -1,0 +1,41 @@
+﻿// --------------------------------------------------------------------------------
+// MODULES - LOADING
+// --------------------------------------------------------------------------------
+.m-loading {
+	// Mask positioning
+	@include position(fixed, $top:0, $right:0, $bottom:0, $left:0);
+
+	// Mask styles
+	background-color: $color-black-opaque;
+	display: none;
+	height: 100%;
+	width: 100%;
+	z-index: $zi-modal;
+
+	.loading-con {
+		@include position(absolute, $top:0, $right:0, $bottom:0, $left:0);
+
+		height: 200px;
+		margin: auto;
+		width: 200px;
+		z-index: $zi-modal + $zi-plus-one;
+	}
+
+	svg {
+		height: 200px;
+		stroke: $m-loading-spinner-color;
+		width: 200px;
+	}
+}
+
+
+// EXAMPLE
+/*
+    <section id="loading" class="m-loading">
+        <div class="loading-con">
+            <div class="t-wrp">
+				loading
+            </div>
+        </div>
+    </section>
+*/

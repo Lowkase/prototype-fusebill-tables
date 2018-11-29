@@ -1,0 +1,151 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - MODAL - EXPORT
+// --------------------------------------------------------------------------------
+.m-table-modal-export  {
+    > .con {
+        height: 300px;
+        width: 687px;
+    }
+
+    > .con .t-wrp {
+        > .bdy {
+
+            .export-content-basic {
+                .export-content-basic-reference {
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .export-content-scheduled {
+                @include j-cf();
+
+                padding: 0 !important;
+
+                .lft, .rgt {
+                    padding: $spacing-21;
+                }
+
+                .lft {
+                    @include j-span(.7);
+
+                    border-right: 1px solid $template-border-color;
+                }
+
+                .rgt {
+                    @include j-span(.3);
+                }
+
+                .export-content-basic-reference, .export-content-scheduled-email {
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                .export-content-stats {
+                    @include j-cf();
+
+                    > div {
+                        @include j-column(4/12);
+                    }
+                }
+
+                .export-content-send-data-for {
+                    @include j-cf();
+
+                    .send-data-for {
+                        @include j-cf();
+                        
+                        float: left;
+                        margin-right: $spacing-21;
+
+                        .send-data-for-check, .send-data-for-input {
+                            float: left;
+                        }
+
+                        .send-data-for-input {
+                             padding-top: $spacing-3;
+                        }
+
+                        .send-data-for-check {
+                            margin-right: $spacing-8;                   
+                        }
+
+                        .send-data-for-number-select {
+                            @include j-cf();
+
+                            input, .m-form-control-select, label {
+                                float: left;
+                            }
+
+                            input {
+                                margin-right: $spacing-8;
+                                width: 100px;
+                            }
+
+                            .m-form-control-select {
+                                width: 140px;
+                            }
+
+                            label {
+                                padding: $spacing-8 0 0 $spacing-8;
+                            }
+                        }
+                    }
+                    .send-data-for:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+
+                .export-content-messages {
+
+                    .export-content-message {
+                        background: $color-gray-50;
+                        margin-bottom: $spacing-13;
+                        padding: $spacing-13;
+
+                        svg {
+                            fill: $color-purple;
+                            height: 21px;
+                            width: 21px
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        > .ldr {
+            display: none;
+        }
+
+        > .exported {
+            padding: $spacing-21;
+
+            .exported-icon {
+                margin-bottom: $spacing-13;
+
+                svg {
+                    fill: $color-green;
+                    height: $spacing-34;
+                    width: $spacing-34;
+                }
+            }
+
+            .exported-message-1 {
+                @include font-size(1.0000); // 16px
+
+                margin-bottom: $spacing-21;
+            }
+
+            .exported-message-2 {
+                margin-bottom: $spacing-21;
+            }            
+        }
+
+
+    }
+}

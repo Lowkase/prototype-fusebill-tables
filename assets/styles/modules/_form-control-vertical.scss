@@ -1,0 +1,40 @@
+// --------------------------------------------------------------------------------
+// MODULES - FORM CONTROL - VERTICAL
+// --------------------------------------------------------------------------------
+.m-form-control-vertical {
+	margin-bottom: $spacing-21;
+
+    label {
+        margin-bottom: $spacing-5;
+    }
+
+	.m-form-control-small-label {
+		margin-bottom: 0;
+	}
+
+    .description {
+        margin-bottom: $spacing-8;
+    }
+
+    .sub-text {
+        @include font-size(0.7500); // 12px
+    }
+
+    .static {
+        @include font-size(0.8750); // 14px
+    }
+}
+.m-form-control-vertical:last-child {
+    margin-bottom: 0;
+}
+
+.m-form-control-vertical.indent {
+    margin-left: $spacing-21;
+}
+
+.m-form-control-vertical-text-padding {
+    > div {
+        padding-top: $spacing-8;
+    }
+}
+

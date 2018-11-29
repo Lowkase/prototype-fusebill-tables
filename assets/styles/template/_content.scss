@@ -1,0 +1,17 @@
+// --------------------------------------------------------------------------------
+// TEMPLATE - CONTENT
+//---------------------------------------------------------------------------------
+.t-content {
+	@include position(absolute, $top: $header-height + $subheader-height, $right: 0, $bottom: 0, $left: 0);
+
+    background: $content-bg;
+    border-bottom: 0;
+    color: $content-font;
+    margin: 0;
+    min-height: $fixed-content-min-height;
+    overflow-y: auto;
+}
+
+.t-content-section {
+	padding: $spacing-13;	
+}

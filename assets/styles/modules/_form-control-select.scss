@@ -1,0 +1,28 @@
+// --------------------------------------------------------------------------------
+// MODULES - FORM CONTROL - SELECT
+// --------------------------------------------------------------------------------
+.m-form-control-select {
+	@include transition(all $transition-timer-400ms $transition-easeInOutQuad);
+
+	border: 1px solid $template-border-color;
+	cursor: pointer;
+
+	select {
+		@include font-size(0.875); // 14px
+	    @include transition(all $transition-timer-400ms $transition-easeInOutQuad);
+
+	    background: $color-white;
+	   	border-radius: 0;
+	    border-style: none;
+	    cursor: pointer;
+	    display: block;
+	    height: $fixed-input-height - 2;
+        margin-bottom: 0;
+	    outline: none;
+	    padding: $spacing-3 $spacing-13;   
+	    width: 100%;
+	}
+}
+.m-form-control-select:hover {
+	box-shadow: $box-shadow-all-light;
+}

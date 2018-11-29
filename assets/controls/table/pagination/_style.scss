@@ -1,0 +1,62 @@
+// --------------------------------------------------------------------------------
+// MODULES - PAGINATION
+// --------------------------------------------------------------------------------
+.m-table-pagination {
+    @include j-cf();
+
+    margin-bottom: $spacing-13;
+
+    > div {
+        float: right;
+        padding-left: $spacing-21;
+    }
+
+    .results {
+        padding-top: 10px;
+    }
+
+    .show, .jump {
+        @include j-cf();
+
+        > div, > label {
+            float: right;
+        }
+
+        label {
+            padding: 10px 5px 0 0;
+        }
+
+        select {
+            width: 60px;
+        }
+    } 
+
+    .pages {
+        color: $color-gray-300;
+        cursor: pointer;
+        padding-top: 10px;
+
+        span {
+            margin-right: 8px;
+            padding: 5px 8px;
+        }
+        span:last-child {
+            margin-right: 0;
+        }
+
+        .selectable {
+            color: $color-blue;
+        }
+        .selectable:hover {
+            font-weight: $font-weight-semibold;
+        }
+
+        .active {
+            font-weight: $font-weight-semibold;
+        }
+    }
+}
+
+.m-pagination:last-child {
+    margin-bottom: 0;
+}

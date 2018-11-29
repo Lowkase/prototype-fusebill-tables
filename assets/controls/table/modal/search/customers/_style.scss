@@ -1,0 +1,60 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - MODAL - SEARCH
+// --------------------------------------------------------------------------------
+.m-table-modal-search {
+    > .con {
+        height: 259px;
+        width: 787px;
+    }
+
+    > .con .t-wrp {
+
+        > .bdy {
+
+            .search-content-basic {
+                @include j-cf();
+
+                .search-content-basic-column {
+                    @include j-column(3/12);
+                }
+                .search-content-basic-term {
+                    @include j-column(9/12);
+
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .search-content-tracked-items {
+                @include j-cf();
+                
+                .search-content-tracked-items-product-item {
+                    @include j-column(5/12);
+                }
+
+                .search-content-tracked-items-product-item-field {
+                    @include j-column(3/12);
+                }
+
+                .search-content-tracked-items-term {
+                    @include j-column(4/12);
+
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .search-content-advanced {
+                @include j-cf();
+
+                > div {
+                    @include j-column(4/12);
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,62 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - INLINE EDIT
+// --------------------------------------------------------------------------------
+.m-table-inline-edit {
+    
+
+    .m-table-inline-edit-value-edit {
+        @include j-cf();
+
+        .m-table-inline-edit-value {
+            @include j-column(10/12);
+        }
+
+        .m-table-inline-edit-edit {
+            @include j-column(2/12);
+
+            text-align: right;
+
+            svg {
+                cursor: pointer;
+                fill: $color-blue;
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
+
+    .m-table-inline-edit-input-actions {
+        display: none;
+
+        .m-table-inline-edit-input {
+            input {
+                width: 100%;
+            }
+        }
+
+        .m-table-inline-edit-actions-ok-cancel {
+            @include j-cf();
+
+            padding-top: $spacing-8;
+
+            svg {
+                cursor: pointer;
+                float: right;
+                height: 18px;
+                margin-left: $spacing-8;
+                width: 18px;            
+            }
+
+            .m-table-inline-edit-actions-ok {
+                fill: $color-blue;
+            }
+
+
+            .m-table-inline-edit-actions-cancel {
+                fill: $color-gray-200;
+            }
+        }
+    }
+
+
+}

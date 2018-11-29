@@ -1,0 +1,17 @@
+﻿// --------------------------------------------------------------------------------
+// MODULES - RADIO-CHECK-GROUP
+// --------------------------------------------------------------------------------
+.m-form-control-radio-check-single {
+    @include j-cf();
+    margin-bottom: $spacing-5;
+
+    input, label {
+        display: block;
+        float: left;
+    }
+
+    label {
+        margin-bottom: 0;
+        margin-left: $spacing-8;
+    }
+}

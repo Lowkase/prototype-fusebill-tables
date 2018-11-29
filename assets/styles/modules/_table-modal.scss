@@ -1,0 +1,168 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - MODAL
+// --------------------------------------------------------------------------------
+.m-table-modal-mask {
+	@include position(fixed, $top:0, $right:0, $bottom:0, $left:0);
+
+	background-color: $color-transparent;
+	display: none;
+	height: 100%;
+	width: 100%;
+	z-index: $zi-modal;	
+}
+
+.m-table-modal {
+	display: none;
+
+	> .con {
+		@include position(absolute, $top:67px); // default top to 67px for header section
+
+		background: $color-white;
+		box-shadow: $box-shadow-all;
+		height: 50%;	// override for each table modal
+		width: 50%;		// override for each table modal
+		z-index: $zi-modal + $zi-plus-one;
+	}
+
+	> .con .t-wrp {
+
+		> .cls {
+			@include position(absolute, $top:$spacing-8, $right:$spacing-8);
+
+			cursor: pointer;
+			padding: $spacing-13;
+			z-index: $zi-modal + $zi-plus-one + $zi-plus-one;
+
+			svg {
+				cursor: pointer;
+				fill: $color-gray-900;
+				height: 12px;
+				width: 12px;
+			}			
+		}
+
+		> .hdr {
+			@include border-top-radius($template-border-radius);
+			@include font-size(1.125); // 18px
+			@include position(absolute, $top:0, $right:0, $left:0);
+
+			background: $color-white;
+			border-bottom: 1px solid $template-border-color;
+			color: $color-gray-900;
+			height: $fixed-header-height;
+			z-index: $zi-modal + $zi-plus-one;
+
+			.title {
+				font-weight: $font-weight-semibold;
+				padding: 19px $spacing-13;
+			}
+		}
+
+        > .nav {
+            @include j-cf();
+            @include position(absolute, $top:$fixed-header-height, $right:0, $left:0);
+
+            border-bottom: 1px solid $template-border-color;
+            background: $color-white;
+            height: 53px;
+            padding-bottom: $spacing-13;
+
+            > div {
+                @include j-cf();
+
+                border-right: 1px solid $template-border-color;
+                cursor: pointer;
+                float: left;
+                height: 52px;
+                padding: $spacing-8 $spacing-21;
+
+                svg, > div {
+                    display: block;
+                    float: left;
+                }
+
+                svg {
+                    fill: $color-blue;
+                    height: $spacing-13;
+                    margin: $spacing-13 $spacing-8 0 0;
+                    width: $spacing-13;
+                }                    
+
+                .label {
+                    padding-top: 10px
+                }
+            }
+
+            > div:hover, > div.active {
+                color: $color-white;
+                background: $color-blue;
+
+                svg {
+                    fill: $color-white;
+                }
+            }
+        }
+
+		> .bdy {
+			@include font-size(0.875); // 14px
+			@include position(absolute, $top:$fixed-header-height, $right:0, $bottom:$fixed-header-height, $left:0);
+
+			overflow-y: auto;
+			padding: $spacing-13;
+		}
+
+		> .ftr {
+			@include border-bottom-radius($template-border-radius);
+			@include position(absolute, $right:0, $bottom:0, $left:0);
+
+			border-top: 1px solid $template-border-color;
+			height: $fixed-header-height;
+			padding: $spacing-13;
+
+            .count {
+                float: left;
+                margin-top: $spacing-8;
+            }
+
+            .m-button {
+                float: right;
+                margin-left: $spacing-8;
+            }			
+		}
+
+        > .ldr {
+            @include position(absolute, $top:$fixed-header-height, $right:0, $bottom:0, $left:0);
+
+            display: none;
+            text-align: center;
+        }
+
+        > .exported {
+            @include position(absolute, $top:$fixed-header-height, $right:0, $bottom:0, $left:0);
+
+            display: none;
+            text-align: center;
+        }
+
+	}
+}
+
+.m-table-modal-with-nav {
+    > .con .t-wrp {
+        > .bdy {
+            @include position(absolute, $top:$fixed-header-height + 53, $right:0, $bottom:$fixed-header-height, $left:0);
+            padding: 0;
+
+            .nav-content {
+                > div {
+                    display: none;
+                    padding: $spacing-13;
+                }
+
+                .active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
