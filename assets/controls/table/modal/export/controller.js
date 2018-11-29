@@ -8,6 +8,7 @@ $(document).on("click",'#show-export', function(e, ele){
 	var self = $(this);
 
 	$("#show-export").addClass("active");
+	tableCustomersNavReset();
 
 	// Load modal
 	$( "#m-table-modal-placeholder" ).load( "/assets/controls/table/modal/export/view.html", function() {

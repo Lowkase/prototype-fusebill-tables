@@ -3,4 +3,99 @@
 //---------------------------------------------------------------------------------
 .v-index {
 
+	.grid {
+		position: relative;
+	}
+
+	.item {
+		display: block;
+		margin-bottom: 2%;
+		margin-right: 2%;
+		//min-height: 420px !important;
+		position: absolute;
+		z-index: 1;
+	}
+
+
+	.item-quick-list {
+		height: 264px;
+	}
+
+	.item-forecast {
+		height: 420px;
+	}
+
+	.item-graph {
+
+		.widget-graph {
+			border-bottom: 1px solid $template-border-color;
+			padding: $spacing-21;
+
+			img {
+				display: block;
+				height: 300px;
+				margin: 0 auto;
+			}
+		}
+
+		.widget-data {
+			> div {
+				padding: $spacing-13;
+
+				> div:first-child {
+					font-weight: $font-weight-semibold;
+				}
+				> div:last-child {
+					@include font-size(0.7500); // 12px
+				}				
+			}
+		}
+
+	}
+
+	.item-50 {
+		width: 48%;
+	}
+
+	.item-100 {
+		width: 98%;
+	}
+
+	.item-content {
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
+
+	.item.muuri-item-dragging {
+		z-index: 3;
+	}
+
+	.item.muuri-item-releasing {
+		z-index: 2;
+	}
+
+	.item.muuri-item-hidden {
+		z-index: 0;
+	}
+
+	#modal-dashboard-settings {
+        .widgets {
+	        > div {
+	            @include j-cf();
+
+	            margin-bottom: $spacing-8;
+
+	            input, div {
+	                display: block;
+	                float: left;
+	            }
+
+	            input {
+	                margin-right: $spacing-13;
+	            }
+	        }
+	    }
+	}
+
 }

@@ -102,12 +102,12 @@
                 .export-content-messages {
 
                     .export-content-message {
-                        background: $color-gray-50;
+                        background: $oldcolor-gray-50;
                         margin-bottom: $spacing-13;
                         padding: $spacing-13;
 
                         svg {
-                            fill: $color-purple;
+                            fill: $oldcolor-purple;
                             height: 21px;
                             width: 21px
                         }
@@ -129,7 +129,7 @@
                 margin-bottom: $spacing-13;
 
                 svg {
-                    fill: $color-green;
+                    fill: $oldcolor-green;
                     height: $spacing-34;
                     width: $spacing-34;
                 }

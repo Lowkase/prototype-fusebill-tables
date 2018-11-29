@@ -1,44 +1,130 @@
 // --------------------------------------------------------------------------------
 // VARIABLES - FIXED
-// CANNOT BE MODIFIED BY USER					      				  
 // --------------------------------------------------------------------------------
 
-// COLORS
-// --------------------------------------------------------------------------------
-$color-transparent: 								transparent;
-$color-white: 										#FFFFFF;
-$color-white-opaque: 					 			rgba(255,255,255,0.75);
-$color-gray-25: 									#f5f6f7; // approximate - used for table zebra stripping
-$color-gray-50: 									#ECEFF1; // material design - blue-gray - 50
-$color-gray-75: 									#E0E2E4; // approximate - used for table hover
-$color-gray-100: 									#CFD8DC; // material design - blue-gray - 100
-$color-gray-200: 									#B0BEC5; // material design - blue-gray - 200
-$color-gray-300: 									#90A4AE; // material design - blue-gray - 300
-$color-gray-400:									#78909C; // material design - blue-gray - 400
-$color-gray-500:									#607D8B; // material design - blue-gray - 500
-$color-gray-600:									#546E7A; // material design - blue-gray - 600
-$color-gray-700:									#455A64; // material design - blue-gray - 700
-$color-gray-800:									#37474F; // material design - blue-gray - 800
-$color-gray-900:									#263238; // material design - blue-gray - 900
-$color-gray-1000: 									#141b1e; // approximate material design
-$color-black: 										#000000;
-$color-black-opaque: 					 			rgba(200,200,200,0.6);
-$color-black-opaque-dark:				 			rgba(50,50,50,0.75);
-$color-green: 										#4CAF50; // material design - green - 600
-$color-green-hover: 								#388E3C; // material design - green - 700
-$color-red: 										#E53935; // material design - red - 600
-$color-red-hover: 									#D32F2F; // material design - red - 700
-$color-purple:                              		#9c27b0; // material design - purple - 500
-$color-yellow: 										#FDD835; // material design - yellow - 600
+// OLD COLORS
+$oldcolor-typography: 								#1f2537;
+
+$oldcolor-transparent: 								transparent;
+
+$oldcolor-white: 									#FFFFFF;
+$oldcolor-white-opaque: 					 		rgba(255,255,255,0.75);
+
+$oldcolor-black: 									#000000;
+$oldcolor-black-opaque: 					 		rgba(200,200,200,0.6);
+$oldcolor-black-opaque-dark:				 		rgba(50,50,50,0.75);
+
+$oldcolor-gray-25: 									#f5f6f7; // approximate - used for table zebra stripping
+$oldcolor-gray-50: 									#ECEFF1; // material design - blue-gray - 50
+$oldcolor-gray-75: 									#E0E2E4; // approximate - used for table hover
+$oldcolor-gray-100: 								#CFD8DC; // material design - blue-gray - 100
+$oldcolor-gray-200: 								#B0BEC5; // material design - blue-gray - 200
+$oldcolor-gray-300: 								#90A4AE; // material design - blue-gray - 300
+$oldcolor-gray-400:									#78909C; // material design - blue-gray - 400
+$oldcolor-gray-500:									#607D8B; // material design - blue-gray - 500
+$oldcolor-gray-600:									#546E7A; // material design - blue-gray - 600
+$oldcolor-gray-700:									#455A64; // material design - blue-gray - 700
+$oldcolor-gray-800:									#37474F; // material design - blue-gray - 800
+$oldcolor-gray-900:									#263238; // material design - blue-gray - 900
+$oldcolor-gray-1000: 								#141b1e; // approximate material design
+
+$oldcolor-green: 									#4CAF50; // material design - green - 600
+$oldcolor-green-hover: 								#388E3C; // material design - green - 700
+
+$oldcolor-red: 										#E53935; // material design - red - 600
+$oldcolor-red-hover: 								#D32F2F; // material design - red - 700
+
+$oldcolor-purple:                              		#9c27b0; // material design - purple - 500
+
+$oldcolor-yellow: 									#FDD835; // material design - yellow - 600
+$oldcolor-yellow: 									#fbc73a;
+$oldcolor-yellow-hover:								darken($oldcolor-yellow, 15%);
+
+$oldcolor-orange: 									#F57C00; // material design - orange - 600 (style guide default - #F6851F)
+$oldcolor-orange-hover:								#EF6C00; // material design - orange - 700
+
+$oldcolor-blue: 									#3b9abe;
+$oldcolor-blue-hover: 								darken($oldcolor-blue, 10%);
+$oldcolor-blue-dark:								darken($oldcolor-blue, 20%);
 
 
-// COLOR ABSTRACTION - BASE THEME
-// Base theme values will be overridden by the user settings 
+
+
+
+// PALETTE
 // --------------------------------------------------------------------------------
-$color-orange: 										#F57C00; // material design - orange - 600 (style guide default - #F6851F)
-$color-orange-hover:								#EF6C00; // material design - orange - 700
-$color-blue: 										#039BE5; // material design - lightblue - 600
-$color-blue-hover: 									#0288D1; // material design - lightblue - 700
+
+// TRANSPARENT
+$color-transparent-100:								transparent;
+
+// WHITE
+$color-white-100: 									#FFFFFF;
+$color-white-100-opaque: 					 		rgba(255,255,255,0.75);
+
+// BLACK
+$color-black-100: 									#000000;
+$color-black-100-opaque: 					 		rgba(200,200,200,0.6);
+$color-black-200-opaque:				 			rgba(50,50,50,0.75);
+
+// LIGHT GRAY
+$color-light-gray-100:								lighten(#e8e9ed, 5%);   // #f6f7f8
+$color-light-gray-200:								#e8e9ed;  				// LIGHT GRAY
+$color-light-gray-300:								darken(#e8e9ed, 10%);  	// #cbced7
+$color-light-gray-400:								darken(#e8e9ed, 25%);	// #a0a5b5
+
+// DARK GRAY
+$color-dark-gray-100:								lighten(#68696A, 25%);  // #a8a9aa
+$color-dark-gray-200:								#68696A;  				// DARK GRAY
+$color-dark-gray-300:								darken(#68696A, 10%);  	// #4f5050
+$color-dark-gray-400:								darken(#68696A, 25%);	// #29292a
+
+// BLUE
+$color-blue-100:									lighten(#3b9abe, 25%);  // #99ccdf
+$color-blue-200:									#3b9abe;  				// BLUE
+$color-blue-300:									darken(#3b9abe, 10%);  	// #2f7a97
+$color-blue-400:									darken(#3b9abe, 25%);	// #1d4b5d
+
+// ORANGE
+$color-orange-100:									lighten(#f6851f, 25%);  // #fbc89a
+$color-orange-200:									#f6851f;  // ORANGE
+$color-orange-300:									darken(#f6851f, 10%);  	// #d96c09
+$color-orange-400:									darken(#f6851f, 25%);	// #904706
+
+// YELLOW
+$color-yellow-100:									lighten(#fbc73a, 25%);  // #feebb7
+$color-yellow-200:									#fbc73a;  // YELLOW
+$color-yellow-300:									darken(#fbc73a, 10%);  	// #fab908
+$color-yellow-400:									darken(#fbc73a, 25%);	// #b28304
+
+// RED
+$color-red-100:										lighten(#be3b3b, 25%);  // #df9999
+$color-red-200:										#be3b3b;  				// RED
+$color-red-300:										darken(#be3b3b, 10%);  	// #972f2f
+$color-red-400:										darken(#be3b3b, 25%);	// #5d1d1d
+
+// PURPLE
+$color-purple-100:									lighten(#853bbe, 25%);  // #c199df
+$color-purple-200:									#853bbe;  				// PURPLE
+$color-purple-300:									darken(#853bbe, 10%);  	// #6a2f97
+$color-purple-400:									darken(#853bbe, 25%);	// #411d5d
+
+// GREEN
+$color-green-100:									lighten(#5abe3b, 25%);  // #aadf99
+$color-green-200:									#5abe3b;  				// GREEN
+$color-green-300:									darken(#5abe3b, 10%);  	// #48972f
+$color-green-400:									darken(#5abe3b, 25%);	// #2c5d1d
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // FONTS
@@ -48,7 +134,7 @@ $font-weight-regular:                       		400;
 $font-weight-semibold:                      		600;
 $font-weight-extrabold:                     		800;
 
-$font-size:                           				16px;
+$font-size:                           				14px;
 // @include font-size(0.6250); // 10px
 // @include font-size(0.6875); // 11px
 // @include font-size(0.7500); // 12px
@@ -57,6 +143,7 @@ $font-size:                           				16px;
 // @include font-size(1.0000); // 16px
 // @include font-size(1.1250); // 18px
 // @include font-size(1.2500); // 20px
+// @include font-size(1.2750); // 22px
 // @include font-size(1.5000); // 24px
 // @include font-size(2.2500); // 36px
 // @include font-size(3.0000); // 48px
@@ -94,6 +181,10 @@ $box-shadow-all: 									0px 0px 30px 0px rgba(0, 0, 0, 0.40);
 $box-shadow-all-light:								0px 0px 10px 0px rgba(0, 0, 0, 0.15);
 
 
+$box-shadow:										0 0 0 1px rgba(63,63,68,.05), 0 1px 3px 0 rgba(63,63,68,.15);
+
+
+
 // TRANSITIONS TIMERS
 // --------------------------------------------------------------------------------
 $transition-timer-400ms: 							.4s;
@@ -111,56 +202,3 @@ $bp-smart-tablet:     								'max-width: 600px';
 $bp-tablet:          								'max-width: 768px';
 $bp-tablet-landscape:								'min-width: 1024px';
 $bp-desktop:                        				'min-width: 1280px';
-
-
-// TEMPLATE
-// --------------------------------------------------------------------------------
-$fixed-input-height: 								36px;
-$fixed-min-height:									480px;
-$fixed-min-width:									1030px;
-
-
-// HEADER
-// --------------------------------------------------------------------------------
-$fixed-header-logo-height: 							36px;
-$fixed-header-logo-width: 							auto;
-
-
-// NAV
-// --------------------------------------------------------------------------------
-$fixed-nav-height-desktop: 							100px;
-$fixed-nav-height-mobile: 							90px;
-
-
-// CONFIGURE
-// --------------------------------------------------------------------------------
-$fixed-configure-include-control-height:			40px;
-$fixed-configure-include-control-width:				40px;
-
-
-// CONTENT
-// --------------------------------------------------------------------------------
-$fixed-content-min-height: 							600px;
-
-
-// CARD
-// --------------------------------------------------------------------------------
-$fixed-card-header-height:            				43px;
-$fixed-card-min-height:                     		190px;
-$fixed-card-bg:                             		$color-white;
-$fixed-card-header-icon-height-width:       		18px;
-$fixed-card-header-icon-width-width:        		18px;
-
-
-// MODAL
-// --------------------------------------------------------------------------------
-$fixed-header-height: 58px;
-
-
-// TABLE
-// --------------------------------------------------------------------------------
-$fixed-table-background-color:              		$color-white;
-$fixed-table-row-height:                    		40px;
-$fixed-table-text-line-height:              		25px;
-$fixed-table-actions-height:                		54px;
-

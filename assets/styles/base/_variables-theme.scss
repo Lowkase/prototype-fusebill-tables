@@ -1,3 +1,65 @@
+
+
+
+		// TEMPLATE
+		// --------------------------------------------------------------------------------
+		$fixed-input-height: 								36px;
+		$fixed-min-height:									480px;
+		$fixed-min-width:									1024px;
+
+
+
+
+
+
+
+
+		// HEADER
+		// --------------------------------------------------------------------------------
+		$fixed-header-logo-height: 							36px;
+		$fixed-header-logo-width: 							auto;
+
+
+		// NAV
+		// --------------------------------------------------------------------------------
+		$fixed-nav-height-desktop: 							100px;
+		$fixed-nav-height-mobile: 							90px;
+
+
+		// CONFIGURE
+		// --------------------------------------------------------------------------------
+		$fixed-configure-include-control-height:			40px;
+		$fixed-configure-include-control-width:				40px;
+
+
+		// CONTENT
+		// --------------------------------------------------------------------------------
+		$fixed-content-min-height: 							600px;
+
+
+		// CARD
+
+
+
+		// MODAL
+		// --------------------------------------------------------------------------------
+		$fixed-header-height: 58px;
+
+
+		// TABLE
+		// --------------------------------------------------------------------------------
+		$fixed-table-background-color:              		$oldcolor-white;
+		$fixed-table-row-height:                    		40px;
+		$fixed-table-text-line-height:              		25px;
+		$fixed-table-actions-height:                		54px;
+
+
+
+
+
+
+
+
 // --------------------------------------------------------------------------------
 // VARIABLES - TEMPLATE
 // --------------------------------------------------------------------------------
@@ -5,42 +67,42 @@
 	// FONTS
     // --------------------------------------------------------------------------------
 	$template-font: 											'Open Sans', sans-serif;
-	$template-font-color:										$color-gray-900;
+	$template-font-color:										$color-dark-gray-400;
 	$template-font-weight: 										$font-weight-regular;
 
 
 	// BORDERS
     // --------------------------------------------------------------------------------
-	$template-border-color: 									$color-gray-100;
+	$template-border-color: 									$color-light-gray-400;
 	$template-border-radius: 									3px;
 
 
 	// LABELS
     // --------------------------------------------------------------------------------
-	$template-label-font-color:                 				$color-gray-600;
+	$template-label-font-color:                 				$oldcolor-gray-600;
 	$template-label-font-weight:                				$font-weight-semibold;
 
 
     // BUTTONS / ACTIONS
     // --------------------------------------------------------------------------------
-    $template-button-disabled: 					            	$color-gray-200;
-    $template-button-disabled-font-color:                   	$color-gray-900;
+    $template-button-disabled: 					            	$oldcolor-gray-200;
+    $template-button-disabled-font-color:                   	$oldcolor-gray-900;
 
-    $template-button-neutral: 					            	$color-gray-50;
-    $template-button-neutral-font-color:                    	$color-gray-900;
-    $template-button-neutral-hover: 				        	$color-gray-100;
-    $template-button-neutral-hover-font-color:              	$color-gray-900;
+    $template-button-neutral: 					            	$oldcolor-gray-50;
+    $template-button-neutral-font-color:                    	$oldcolor-gray-900;
+    $template-button-neutral-hover: 				        	$oldcolor-gray-100;
+    $template-button-neutral-hover-font-color:              	$oldcolor-gray-900;
 
-    $template-button-primary: 					            	$color-blue;
-    $template-button-primary-font-color:                    	$color-white;
-    $template-button-primary-hover: 				        	$color-blue-hover;
-    $template-button-primary-hover-font-color:              	$color-white;
+    $template-button-primary: 					            	$color-orange-200;
+    $template-button-primary-font-color:                    	$color-white-100;
+    $template-button-primary-hover: 				        	$color-orange-300;
+    $template-button-primary-hover-font-color:              	$color-white-100;
 
 
 	// GENERIC HEADER - CARDS / MODALS / TABLES
 	// --------------------------------------------------------------------------------
-	$template-generic-header-background:              			$color-gray-50;
-	$template-generic-header-font-color: 						$color-gray-900;
+	$template-generic-header-background:              			$oldcolor-gray-50;
+	$template-generic-header-font-color: 						$oldcolor-gray-900;
 	$template-generic-header-font-weight:             			$font-weight-regular;
 
 
@@ -50,27 +112,63 @@
 // VARIABLES - LAYOUT
 // --------------------------------------------------------------------------------
 
-	// HEADER
+
+	// ASIDE
 	// --------------------------------------------------------------------------------
-	$header-background:											$color-white;
-	$header-height:												67px;
+	$aside-width: 220px;
+
+		// ASIDE - HEADER
+		// --------------------------------------------------------------------------------
+		$aside-header-height:									50px;
+		$aside-header-background: 								$color-blue-300;
+
+		// ASIDE - NAV
+		// --------------------------------------------------------------------------------
+		$aside-nav-background: 									$color-light-gray-200;
+		$aside-nav-active-color:								$color-blue-200;
+		$aside-nav-not-active-color: 							$template-font-color;
+
+
+	// MAIN
+	// --------------------------------------------------------------------------------
+
+		// MAIN - HEADER
+		// --------------------------------------------------------------------------------
+		$main-header-height: 									50px;
+		$main-header-background: 								$color-blue-200;
+
+		// MAIN - CONTENT
+		// --------------------------------------------------------------------------------
+		$main-content-background: 								$color-light-gray-200;
+
+		// MAIN - SUBHEADER
+		// --------------------------------------------------------------------------------
+		$main-content-subheader-height:							70px;
+
+
+
+
 
 	// HEADER
 	// --------------------------------------------------------------------------------
-	$subheader-background:										$color-white;
+	$header-background:											$oldcolor-orange;
+	$header-background-dark: 									$oldcolor-orange;
+	$header-height:												63px;
+
+	// SUB-HEADER
+	// --------------------------------------------------------------------------------
+	$subheader-background:										$oldcolor-white;
 	$subheader-height:											112px;
-
 
 	// CONTENT
 	// --------------------------------------------------------------------------------
-	$content-bg:												$color-gray-75;
+	//$content-bg:												$oldcolor-gray-75;
 	$content-font: 												$template-font-color;
-
 
 	// BODY
 	// --------------------------------------------------------------------------------
 	// This setting ensures the footer color is persisted if the content of the page does not fill the viewport
-	$template-background: 										$color-white;
+	$template-background: 										$oldcolor-white;
 
 
 

@@ -2,13 +2,13 @@
 // MODULE - TABLE  
 // --------------------------------------------------------------------------------
 $m-table-header-height: 53px;
-$m-table-border-color: $color-gray-200;
+$m-table-border-color: $oldcolor-gray-200;
 
 
 .m-table {
     @include font-size(0.8125); // 13px
 
-    background: $color-white;
+    background: $oldcolor-white;
     line-height: 1.4;
 
     label, select {
@@ -46,7 +46,7 @@ $m-table-border-color: $color-gray-200;
                     }
 
                     svg {
-                        fill: $color-blue;
+                        fill: $oldcolor-blue;
                         height: $spacing-13;
                         margin: $spacing-13 $spacing-8 0 0;
                         width: $spacing-13;
@@ -58,11 +58,11 @@ $m-table-border-color: $color-gray-200;
                 }
 
                 > div > div.hover-highlight:hover, .active {
-                    color: $color-white;
-                    background: $color-blue;
+                    color: $oldcolor-white;
+                    background: $oldcolor-blue;
 
                     svg {
-                        fill: $color-white;
+                        fill: $oldcolor-white;
                     }
                 }
             }
@@ -102,7 +102,7 @@ $m-table-border-color: $color-gray-200;
         th {
             @include j-cf();
 
-            background: $color-gray-25;
+            background: $oldcolor-gray-25;
 
             .name {
                 float: left;
@@ -126,7 +126,7 @@ $m-table-border-color: $color-gray-200;
             svg {
                 cursor: pointer;
                 display: inline-block;
-                fill: $color-blue;
+                fill: $oldcolor-blue;
                 height: 15px;
                 width: 15px;
             }            
@@ -153,10 +153,17 @@ $m-table-border-color: $color-gray-200;
     }
 
     .m-table-edit {
-        color: $color-blue;
+        color: $oldcolor-blue;
         cursor: pointer;
         text-decoration: underline;
     }
 
 
+}
+
+
+.m-table-inline {
+   .m-table-header, table, .m-table-footer {
+        border: 0; 
+    }
 }

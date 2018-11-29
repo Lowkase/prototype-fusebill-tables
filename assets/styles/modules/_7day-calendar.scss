@@ -1,0 +1,59 @@
+// --------------------------------------------------------------------------------
+// MODULES - 7DAY CALENDAR
+// --------------------------------------------------------------------------------
+.m-7day-calendar {
+
+	.row {
+		@include j-cf();
+
+		border-bottom: 1px solid $template-border-color;
+	}
+	.row:last-child {
+		border-bottom: 0;
+	}
+
+	.day {
+		@include font-size(0.8125); // 13px
+		@include j-span(3/12);
+
+		border-right: 1px solid $template-border-color;
+		height: 180px;
+		padding: $spacing-8;
+
+		.date {
+			color: $color-dark-gray-300;
+			font-weight: $font-weight-semibold;
+			text-align: right;
+		}
+
+		.activity {
+			margin-top: $spacing-21;
+
+			li {
+				margin-bottom: $spacing-5;
+			}
+		}
+	}
+	.day:last-child {
+		border-right: 0;
+	}
+
+	.day-last {
+		.date {
+			color: $color-dark-gray-100;
+		}
+	}
+
+	.status-invoices {
+		color: $color-yellow-400;
+	}
+
+	.status-payments {
+		color: $color-green-200;
+	}
+
+	.status-projected {
+		color: $color-dark-gray-400;
+	}
+	
+}

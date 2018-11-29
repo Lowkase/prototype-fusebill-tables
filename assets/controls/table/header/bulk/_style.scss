@@ -4,8 +4,8 @@
 .m-table-bulk {
     @include j-cf();
 
-    background: $color-blue;
-    color: $color-white;
+    background: $oldcolor-blue;
+    color: $oldcolor-white;
     display: none;
     font-weight: $font-weight-semibold;
     height: 53px;
@@ -13,7 +13,7 @@
 
     .arrow {
         @include position(absolute, $bottom: -4px, $left: 11px);
-        @include rounded-diamond(left, 13px, 45deg, $color-blue, 0px, transparent, 0px)
+        @include rounded-diamond(left, 13px, 45deg, $oldcolor-blue, 0px, transparent, 0px)
     }
 
     .close {
@@ -21,7 +21,7 @@
 
         svg {
             cursor: pointer;
-            fill: $color-white;
+            fill: $oldcolor-white;
             height: 12px;
             width: 12px;
         }

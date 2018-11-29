@@ -32,7 +32,7 @@
     } 
 
     .pages {
-        color: $color-gray-300;
+        color: $oldcolor-gray-300;
         cursor: pointer;
         padding-top: 10px;
 
@@ -45,7 +45,7 @@
         }
 
         .selectable {
-            color: $color-blue;
+            color: $oldcolor-blue;
         }
         .selectable:hover {
             font-weight: $font-weight-semibold;

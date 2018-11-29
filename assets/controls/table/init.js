@@ -14,6 +14,7 @@ function initTable(gridSettings, gridData, target) {
 
 	// PUSH TABLE
 	$("#" + target).html(headerOutput + bodyOutput);
+
 }
 
 
@@ -102,13 +103,11 @@ function initTableHeader(gridSettings, isBulk, isActions) {
 
 
 function initTableBody(gridData, isBulk, isExpand, isActions) {
-
 	// BODY - START
 	var bodyOutput = "<tbody>";
 
 	// BUILD ROWS
 	for (var bodyRow in gridData) {
-
 		var isExpansionDrawer = gridData[bodyRow].isExpansionDrawer;
 		if(!isExpansionDrawer) {
 
@@ -291,4 +290,8 @@ function initPagination(isPagination) {
 		$( ".m-table-footer" ).load( "/assets/controls/table/pagination/view.html", function() {});	
 	}
 
+}
+
+function tableCustomersNavReset() {
+	$("#table-header-default > div > div > div").removeClass("active");
 }

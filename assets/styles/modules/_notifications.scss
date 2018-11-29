@@ -11,7 +11,7 @@
     z-index: $zi-notificaiton;
 
     .m-notification {
-        background: $color-white;
+        background: $oldcolor-white;
         padding: $spacing-13;
 
 	    .m-notification-cls {
@@ -23,23 +23,23 @@
 
 		    svg {
 			    cursor: pointer;
-			    fill: $color-white;
+			    fill: $oldcolor-white;
 			    height: 12px;
 			    width: 12px;
 		    }			
 	    }
 
         .message {
-            color: $color-white;
+            color: $oldcolor-white;
             padding-right: $spacing-21;
         }
 
         &.error {
-            background: $color-red;
+            background: $oldcolor-red;
         }
 
         &.success {
-            background: $color-green;
+            background: $oldcolor-green;
         }
     }
 }

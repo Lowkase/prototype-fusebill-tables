@@ -1,0 +1,215 @@
+// --------------------------------------------------------------------------------
+// MODULES - PALETTE
+// --------------------------------------------------------------------------------
+.m-palette {
+
+	@include font-size(0.8750); // 14px
+
+	.row {
+		@include j-cf();
+
+		margin-bottom: $spacing-21;
+	}
+
+	.color {
+		@include j-column(4/12);
+	}
+
+	.title {
+		font-weight: bold;
+		margin-bottom: $spacing-5;
+	}
+
+	ul {
+		border: 1px solid $color-light-gray-400;
+	}
+
+	li {
+		@include j-cf();
+
+		padding: $spacing-21 $spacing-8;
+
+		div:first-child {
+			@include j-column(4/12);
+		}
+
+		div:last-child {
+			@include j-column(8/12);
+
+			text-align: right;
+		}
+	}
+
+	.blank {
+		height: 61px;
+	}
+
+
+
+
+	// TRANSPARENT
+	.zfb-color-transparent-100 {
+		background: $color-transparent-100;
+	}
+
+
+	// WHITE
+	.zfb-color-white-100 {
+		background: $color-white-100;
+	}
+	.zfb-color-white-100-opaque {
+		background: $color-white-100-opaque;
+	}
+
+
+	// BLACK
+	.zfb-color-black-100 {
+		background: $color-black-100;
+		color: $color-white-100;
+	}
+	.zfb-color-black-100-opaque {
+		background: $color-black-100-opaque;
+	}
+	.zfb-color-black-200-opaque {
+		background: $color-black-100-opaque;
+	}
+
+
+	// LIGHT GRAY
+	.zfb-color-light-gray-100 {
+		background: $color-light-gray-100;
+	}
+	.zfb-color-light-gray-200 {
+		background: $color-light-gray-200;
+	}
+	.zfb-color-light-gray-300 {
+		background: $color-light-gray-300;
+	}
+	.zfb-color-light-gray-400 {
+		background: $color-light-gray-400;
+		color: $color-white-100;
+	}
+
+
+	// DARK GRAY
+	.zfb-color-dark-gray-100 {
+		background: $color-dark-gray-100;
+		color: $color-white-100;
+	}
+	.zfb-color-dark-gray-200 {
+		background: $color-dark-gray-200;
+		color: $color-white-100;
+	}
+	.zfb-color-dark-gray-300 {
+		background: $color-dark-gray-300;
+		color: $color-white-100;
+	}
+	.zfb-color-dark-gray-400 {
+		background: $color-dark-gray-400;
+		color: $color-white-100;
+	}
+
+
+	// PURPLE
+	.zfb-color-purple-100 {
+		background: $color-purple-100;
+	}
+	.zfb-color-purple-200 {
+		background: $color-purple-200;
+		color: $color-white-100;
+	}
+	.zfb-color-purple-300 {
+		background: $color-purple-300;
+		color: $color-white-100;
+	}
+	.zfb-color-purple-400 {
+		background: $color-purple-400;
+		color: $color-white-100;
+	}
+
+
+	// BLUE
+	.zfb-color-blue-100 {
+		background: $color-blue-100;
+	}
+	.zfb-color-blue-200 {
+		background: $color-blue-200;	
+	}
+	.zfb-color-blue-300 {
+		background: $color-blue-300;
+		color: $color-white-100;
+	}
+	.zfb-color-blue-400 {
+		background: $color-blue-400;
+		color: $color-white-100;
+	}
+
+
+	// GREEN
+	.zfb-color-green-100 {
+		background: $color-green-100;
+	}
+	.zfb-color-green-200 {
+		background: $color-green-200;
+	}
+	.zfb-color-green-300 {
+		background: $color-green-300;
+		color: $color-white-100;
+	}
+	.zfb-color-green-400 {
+		background: $color-green-400;
+		color: $color-white-100;
+	}
+
+
+	// YELLOW
+	.zfb-color-yellow-100 {
+		background: $color-yellow-100;
+	}
+	.zfb-color-yellow-200 {
+		background: $color-yellow-200;	
+	}
+	.zfb-color-yellow-300 {
+		background: $color-yellow-300;
+	}
+	.zfb-color-yellow-400 {
+		background: $color-yellow-400;
+		color: $color-white-100;
+	}
+
+
+	// ORANGE
+	.zfb-color-orange-100 {
+		background: $color-orange-100;
+	}
+	.zfb-color-orange-200 {
+		background: $color-orange-200;	
+	}
+	.zfb-color-orange-300 {
+		background: $color-orange-300;
+		color: $color-white-100;
+	}
+	.zfb-color-orange-400 {
+		background: $color-orange-400;
+		color: $color-white-100;
+	}
+
+
+	// RED
+	.zfb-color-red-100 {
+		background: $color-red-100;
+	}
+	.zfb-color-red-200 {
+		background: $color-red-200;
+		color: $color-white-100;
+	}
+	.zfb-color-red-300 {
+		background: $color-red-300;
+		color: $color-white-100;
+	}
+	.zfb-color-red-400 {
+		background: $color-red-400;
+		color: $color-white-100;
+	}
+
+}

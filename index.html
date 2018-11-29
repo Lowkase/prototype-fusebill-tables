@@ -10,29 +10,120 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="assets/styles/style.css">
 	</head>
-    <body>
+    <body class="v-index">
 
 
-        <!-- MODAL TABLE MASK -->
-        <div id="modal-table-mask" class="m-table-modal-mask"></div>
+		<!-- MODAL - DASHBOARD SETTINGS - START -->
+		<section id="modal-dashboard-settings" class="m-modal m-modal-size-medium">
+			<div class="con">
+				<div class="t-wrp">
+					<div class="cls modal-dashboard-settings-cancel-action">
+						<svg viewBox="0 0 191.414 191.414">
+						  	<g>
+								<title>Close</title>
+								<rect width="100%" height="100%" fill="#ffffff" fill-opacity="0" />
+						    	<path d="M107.888,96.142l80.916-80.916c3.48-3.48,3.48-8.701,0-12.181s-8.701-3.48-12.181,0L95.707,83.961L14.791,3.045 c-3.48-3.48-8.701-3.48-12.181,0s-3.48,8.701,0,12.181l80.915,80.916L2.61,177.057c-3.48,3.48-3.48,8.701,0,12.181 c1.74,1.74,5.22,1.74,6.96,1.74s5.22,0,5.22-1.74l80.916-80.916l80.916,80.916c1.74,1.74,5.22,1.74,6.96,1.74 c1.74,0,5.22,0,5.22-1.74c3.48-3.48,3.48-8.701,0-12.181L107.888,96.142z"/>
+						  	</g>
+						</svg>
+					</div>
+
+					<div class="hdr">
+						<div class="title">DASHBOARD SETTINGS</div>
+					</div>
+
+					<div class="bdy">
+						<div class="widgets">
+		                    <div>
+		                        <input id="widget-weekly-forecast-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>Weekly Forecast</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-expiring-credit-cards-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>Expiring Credit Cards</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-new-customers-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>New Customers</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-failed-payments-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>Failed Payments</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-aging-invoices-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>Aging Invoices</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-net-earned-revenue-check" class="widgets-check" type="checkbox">
+		                        <div>Net Earned Revenue</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-net-collections-check" class="widgets-check" type="checkbox">
+		                        <div>Net Collections</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-monthly-sales-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>Monthly Sales</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-daily-cash-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>Daily Cash</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-yearly-revenue-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>Yearly Revenue</div>
+		                    </div>
+		                    <div>
+		                        <input id="widget-mrr-check" class="widgets-check" type="checkbox" checked="">
+		                        <div>MRR</div>
+		                    </div>
+		                </div>
+					</div>
+
+					<div class="ftr">
+						<ul class="m-actions-list m-actions-list-right">
+							<li>
+								<div class="m-button m-button-neutral modal-dashboard-settings-cancel-action">CANCEL</div>
+								<div class="m-button m-button-primary modal-dashboard-settings-apply-action">APPLY</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- MODAL - DASHBOARD SETTINGS - END -->
 
 
+    	<!-- ASIDE -->
+    	<aside id="t-aside" class="t-aside">
+
+	    	<!-- HEADER -->
+	    	<header id="t-aside-header" class="t-aside-header"></header>
+
+	    	<!-- NAV -->
+	    	<nav id="t-aside-nav" class="t-aside-nav"></nav>
+
+    	</aside>
 
 
-    	<!-- HEADER -->
-    	<header id="t-header" class="t-header"></header>
+		<!-- MAIN -->
+		<main id="t-main" class="t-main">
 
-        <!-- SUBHEADER -->
-        <header id="t-subheader" class="t-subheader"></header>
+	    	<!-- HEADER -->
+	    	<header id="t-main-header" class="t-main-header"></header>
 
-		<!-- CONTENT -->
-    	<div id="t-content" class="t-content v-select"></div>
+	    	<!-- CONTENT -->
+	    	<section id="t-main-content" class="t-main-content"></section>
 
-
+		</main>
 
 
 		<!-- LIBS -->
 		<script src="/assets/libs/jquery/jquery-3.3.1.min.js"></script>
+		<script src="/assets/libs/jquery/jquery-ui-1.12.1.min.js"></script>
+		<script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
+		<script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
+		<script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
 
 		<!-- DATA -->
 		<script src="/assets/data/data.js"></script>
@@ -46,7 +137,7 @@
 		<script src="/assets/controls/table/header/bulk/controller.js"></script>
 		<script src="/assets/controls/table/modal/helper.js"></script>
 		<script src="/assets/controls/table/modal/actions/controller.js"></script>
-		<script src="/assets/controls/table/modal/customize/customers/controller.js"></script>
+		<!-- <script src="/assets/controls/table/modal/customize/customers/controller.js"></script> -->
 		<script src="/assets/controls/table/modal/customize/controller.js"></script>
 		<script src="/assets/controls/table/modal/export/controller.js"></script>
 		<script src="/assets/controls/table/modal/search/customers/controller.js"></script>
@@ -54,26 +145,24 @@
 		<script src="/assets/controls/table/row/expand/controller.js"></script>
 		<script src="/assets/controls/table/row/inline-edit/controller.js"></script>
 
-
-
-
 		<!-- INIT -->
 		<script>
             $(document).ready(function() {
 
-            	// HEADER
-				$( "#t-header" ).load( "/assets/views/template/header.html", function() {
+            	// ASIDE - HEADER
+				$( "#t-aside-header" ).load( "/assets/views/template/aside-header.html", function()		{    });
 
+            	// ASIDE - NAV
+				$( "#t-aside-nav" ).load( "/assets/views/template/aside-nav.html", function()			{    
+	            	updateMenu("HOME");
 				});
 
-                // SUBHEADER
-                $( "#t-subheader" ).load( "/assets/views/template/subheader.html", function() {
-                    subheaderSetTitles("TABLES", "Fusebill Admin Tables Prototype");
-                });
+	           	// MAIN - HEADER
+				$( "#t-main-header" ).load( "/assets/views/template/main-header.html", function()		{    });
 
-            	// CONTENT
-				$( "#t-content" ).load( "/assets/views/index/view.html", function() {
-					initIndex("customer-grid");
+            	// MAIN - CONTENT
+				$( "#t-main-content" ).load( "/assets/views/index/view.html", function()				{    
+			        dashboardSortable();
 				});
 
             });

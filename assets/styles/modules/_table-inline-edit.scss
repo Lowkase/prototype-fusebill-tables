@@ -18,7 +18,7 @@
 
             svg {
                 cursor: pointer;
-                fill: $color-blue;
+                fill: $oldcolor-blue;
                 height: 16px;
                 width: 16px;
             }
@@ -48,12 +48,12 @@
             }
 
             .m-table-inline-edit-actions-ok {
-                fill: $color-blue;
+                fill: $oldcolor-blue;
             }
 
 
             .m-table-inline-edit-actions-cancel {
-                fill: $color-gray-200;
+                fill: $oldcolor-gray-200;
             }
         }
     }

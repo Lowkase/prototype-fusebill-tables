@@ -15,7 +15,6 @@ $(document).on("click",'#show-customize', function(e, ele){
 	$( "#m-table-modal-placeholder" ).load( control, function() {
 		placeTableModal(self, "#modal-customize");
 		$("#modal-customize").show();
-
 		$("#modal-table-mask").addClass("modal-table-mask-customize");
 		$("#modal-table-mask").show();
 	});
@@ -25,7 +24,6 @@ $(document).on("click",'#show-customize', function(e, ele){
 $(document).on("click",'.modal-customize-cancel-action, .m-table-modal-mask.modal-table-mask-customize, #modal-customize-apply', function(e, ele){
 	$("#show-customize").removeClass("active");
 	$("#m-table-modal-placeholder .m-table-modal").remove();
-
 	$("#modal-table-mask").removeClass("modal-table-mask-customize");	
 	$("#modal-table-mask").hide();
 });
@@ -34,11 +32,10 @@ $(document).on("click",'.modal-customize-cancel-action, .m-table-modal-mask.moda
 $(document).on("click", '.customize-columns-check', function(e, ele){
 	var checkCount = 0;
 	var checkedCount = 0;
+	var checkboxOffset = 0;
 
 	// Determine if bulk column is visiable
-	var isBulk = gridDataInvoicesSettings[0].isBulk;
-
-	var checkboxOffset = 0;
+	var isBulk = tableCustomersSettings[0].isBulk;
 
 	if (isBulk) {
 		checkboxOffset = 1;
@@ -50,6 +47,11 @@ $(document).on("click", '.customize-columns-check', function(e, ele){
 	// Hide all columns
 	$( "table thead tr th" ).hide();
 	$( "table tbody tr td" ).hide();
+
+	if (isBulk) {
+		$( "table thead tr th:first-child" ).show();
+		$( "table tbody tr td:first-child" ).show();
+	}
 
 	$('input.customize-columns-check').each(function () {
 		checkCount = checkCount + 1;

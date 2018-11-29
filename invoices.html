@@ -4,35 +4,51 @@
 	    <meta charset="utf-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <title>
-	        Tables - Invoices
+	        Invoices
 	    </title>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="assets/styles/style.css">
 	</head>
-    <body>
+    <body class="v-invoices">
 
 
         <!-- MODAL TABLE MASK -->
         <div id="modal-table-mask" class="m-table-modal-mask"></div>
 
 
+    	<!-- ASIDE -->
+    	<aside id="t-aside" class="t-aside">
+
+	    	<!-- HEADER -->
+	    	<header id="t-aside-header" class="t-aside-header"></header>
+
+	    	<!-- NAV -->
+	    	<nav id="t-aside-nav" class="t-aside-nav"></nav>
+
+    	</aside>
 
 
-    	<!-- HEADER -->
-    	<header id="t-header" class="t-header"></header>
+		<!-- MAIN -->
+		<main id="t-main" class="t-main">
 
-        <!-- SUBHEADER -->
-        <header id="t-subheader" class="t-subheader"></header>
+	    	<!-- HEADER -->
+	    	<header id="t-main-header" class="t-main-header"></header>
 
-		<!-- CONTENT -->
-    	<div id="t-content" class="t-content v-select"></div>
+	    	<!-- CONTENT -->
+	    	<section id="t-main-content" class="t-main-content"></section>
 
-
+		</main>
 
 
 		<!-- LIBS -->
 		<script src="/assets/libs/jquery/jquery-3.3.1.min.js"></script>
+
+
+<script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
+<script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
+<script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
+
 
 		<!-- DATA -->
 		<script src="/assets/data/data.js"></script>
@@ -41,39 +57,24 @@
 		<script src="/assets/views/template/template.js"></script>
 		<script src="/assets/views/invoices/controller.js"></script>
 
-		<!-- TABLE CONTROLLERS -->
-		<script src="/assets/controls/table/init.js"></script>
-		<script src="/assets/controls/table/header/bulk/controller.js"></script>
-		<script src="/assets/controls/table/modal/helper.js"></script>
-		<script src="/assets/controls/table/modal/actions/controller.js"></script>
-		<script src="/assets/controls/table/modal/customize/invoices/controller.js"></script>
-		<script src="/assets/controls/table/modal/customize/controller.js"></script>
-		<script src="/assets/controls/table/modal/export/controller.js"></script>
-		<script src="/assets/controls/table/modal/search/customers/controller.js"></script>
-		<script src="/assets/controls/table/pagination/controller.js"></script>
-		<script src="/assets/controls/table/row/expand/controller.js"></script>
-		<script src="/assets/controls/table/row/inline-edit/controller.js"></script>
-
-
-
-
 		<!-- INIT -->
 		<script>
             $(document).ready(function() {
 
-            	// HEADER
-				$( "#t-header" ).load( "/assets/views/template/header.html", function() {
+            	// ASIDE - HEADER
+				$( "#t-aside-header" ).load( "/assets/views/template/aside-header.html", function()		{    });
 
+            	// ASIDE - NAV
+				$( "#t-aside-nav" ).load( "/assets/views/template/aside-nav.html", function()			{    
+					updateMenu("INVOICES");
 				});
 
-                // SUBHEADER
-                $( "#t-subheader" ).load( "/assets/views/template/subheader.html", function() {
-                    subheaderSetTitles("TABLES", "Fusebill Admin Tables Prototype");
-                });
+	           	// MAIN - HEADER
+				$( "#t-main-header" ).load( "/assets/views/template/main-header.html", function()		{    });
 
-            	// CONTENT
-				$( "#t-content" ).load( "/assets/views/invoices/view.html", function() {
-					initInvoices("invoices-grid");
+            	// MAIN - CONTENT
+				$( "#t-main-content" ).load( "/assets/views/invoices/view.html", function()				{
+					initInvoices();
 				});
 
             });

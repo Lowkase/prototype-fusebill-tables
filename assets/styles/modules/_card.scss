@@ -1,45 +1,71 @@
 ﻿// --------------------------------------------------------------------------------
 // MODULES - CARD
 // --------------------------------------------------------------------------------
+
+$m-card-header-height:                      53px;
+$m-card-header-padding:                     $spacing-8;
+$m-card-background:                         $color-white-100;
+$m-card-header-icon-height-width:           18px;
+
 .m-card {
     @include transition (all $transition-timer-400ms $transition-easeInOutQuad);
 
-    background: $fixed-card-bg;
-    box-shadow: $box-shadow-right-bottom;
+    background: $m-card-background;
+    box-shadow: $box-shadow;
     margin-bottom: $spacing-21;
 
     .m-card-hdr {
-        @include font-size(1.125); // 18px
-        @incluce j-cf();
-        
-        background: $template-generic-header-background;
-        color: $template-generic-header-font-color;
+        @include font-size(0.8750); // 14px
+        @include j-cf();
+
         border-bottom: 1px solid $template-border-color;
-        font-weight: $template-generic-header-font-weight;
-        height: $fixed-card-header-height;
-        padding: $spacing-8 $spacing-8;
+        font-weight: $font-weight-semibold;
+        min-height: $m-card-header-height;
+        padding: $m-card-header-padding $spacing-13;
 
-        .icon {
-            float: left;
-            margin-right: $spacing-5;
-            margin-top: $spacing-5;
+        .icon-title {
+            @include j-cf();
+            @include j-column(8/12);
 
-            svg {
-                height: $fixed-card-header-icon-height-width;
-                width: $fixed-card-header-icon-width-width;
-            }  
+            .icon {
+                float: left;
+                margin-right: $spacing-8;
+                margin-top: $spacing-8;
+
+                svg {
+                    height: $m-card-header-icon-height-width;
+                    width: $m-card-header-icon-height-width;
+                }  
+            }
+
+            .title {
+                @include text-truncate();
+
+                float: left;
+                line-height: $m-card-header-height - $m-card-header-padding - $m-card-header-padding;
+            }            
         }
 
-        .title {
-            @include text-truncate();
+        .actions {
+            @include j-column(4/12);
 
-            line-height: 26px;
-            float: left;
-            width: 60%;
+            > div {
+                float: right;
+                margin-left: $spacing-13;
+            }
+
+            .text-action {
+                color: $color-orange-200;
+                cursor: pointer;
+                font-weight: $font-weight-regular;
+                line-height: $m-card-header-height - $m-card-header-padding - $m-card-header-padding;
+            }
         }
     }
 
     .m-card-bdy {
+        @include font-size(0.8750); // 14px
+        
         padding: $spacing-13;
     }
 
@@ -47,21 +73,3 @@
         padding: 0;
     }
 }
-
-
-// EXAMPLE
-/*
-    <!-- CARD - START -->
-    <div class="m-card">
-        <div class="m-card-hdr">
-            <div class="icon">
-                -- SVG ELEMENT -->
-            </div>
-            <div class="title">CARD_TITLE</div>
-        </div>
-        <div class="m-card-bdy">
-            CARD_BODY WITH PADDING
-        </div>
-    </div>
-    <!-- CARD - END-->
-*/

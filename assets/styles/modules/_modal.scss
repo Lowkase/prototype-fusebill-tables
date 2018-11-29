@@ -6,7 +6,7 @@
 	@include position(fixed, $top:0, $right:0, $bottom:0, $left:0);
 
 	// Mask styles
-	background-color: $color-black-opaque;
+	background-color: $oldcolor-black-opaque;
 	display: none;
 	height: 100%;
 	min-width: $fixed-min-width;
@@ -16,7 +16,7 @@
 	> .con {
 		@include position(absolute, $top:0, $right:0, $bottom:0, $left:0);
 
-		background: $color-white;
+		background: $oldcolor-white;
 		box-shadow: $box-shadow-all;
 		height: 80%;
 		margin: auto;
@@ -35,7 +35,7 @@
 
 			svg {
 				cursor: pointer;
-				fill: $color-gray-900;
+				fill: $oldcolor-gray-900;
 				height: 12px;
 				width: 12px;
 			}			
@@ -46,9 +46,9 @@
 			@include font-size(1.125); // 18px
 			@include position(absolute, $top:0, $right:0, $left:0);
 
-			background: $color-white;
+			background: $oldcolor-white;
 			border-bottom: 1px solid $template-border-color;
-			color: $color-gray-900;
+			color: $oldcolor-gray-900;
 			height: $fixed-header-height;
 
 			z-index: $zi-modal + $zi-plus-one;
@@ -65,7 +65,7 @@
 				width: 95%;
 
 				svg {
-					fill: $color-gray-900;
+					fill: $oldcolor-gray-900;
 					float: left;
 					height: 30px;
 					margin-right: $spacing-8;
@@ -73,7 +73,7 @@
 				}
 
 				span {
-					color: $color-gray-900;
+					color: $oldcolor-gray-900;
 					float: left;
 					font-weight: $font-weight-semibold;
 					padding-top: $spacing-8;

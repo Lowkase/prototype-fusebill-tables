@@ -3,13 +3,15 @@
 // --------------------------------------------------------------------------------
 .m-button {
     @include transition (all $transition-timer-400ms $transition-easeInOutQuad);
-    @include font-size(0.8125); // 13px
+    
+    //@include font-size(0.8125); // 13px
 
-    border-radius: $spacing-2;
-    box-shadow: $box-shadow-right-bottom;
+    border-radius: $spacing-1;
+    box-shadow: $box-shadow;
     cursor: pointer;
     display: inline-block;
-    padding: 9px $spacing-21;
+    height: 36px;
+    padding: $spacing-8 $spacing-13;
     outline: none;
     text-align: center;
     text-decoration: none;

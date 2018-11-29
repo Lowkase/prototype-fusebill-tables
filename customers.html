@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>
+	        Tables - Customers
+	    </title>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="assets/styles/style.css">
+	</head>
+    <body class="v-customers">
+
+
+        <!-- MODAL TABLE MASK -->
+        <div id="modal-table-mask" class="m-table-modal-mask"></div>
+
+
+    	<!-- ASIDE -->
+    	<aside id="t-aside" class="t-aside">
+
+	    	<!-- HEADER -->
+	    	<header id="t-aside-header" class="t-aside-header"></header>
+
+	    	<!-- NAV -->
+	    	<nav id="t-aside-nav" class="t-aside-nav"></nav>
+
+    	</aside>
+
+
+		<!-- MAIN -->
+		<main id="t-main" class="t-main">
+
+	    	<!-- HEADER -->
+	    	<header id="t-main-header" class="t-main-header"></header>
+
+	    	<!-- CONTENT -->
+	    	<section id="t-main-content" class="t-main-content"></section>
+
+		</main>
+
+
+		<!-- LIBS -->
+		<script src="/assets/libs/jquery/jquery-3.3.1.min.js"></script>
+
+		<!-- DATA -->
+		<script src="/assets/data/data.js"></script>
+
+		<!-- VIEW CONTROLLERS -->
+		<script src="/assets/views/template/template.js"></script>
+		<script src="/assets/views/customers/controller.js"></script>
+
+		<!-- TABLE CONTROLLERS -->
+		<script src="/assets/controls/table/init.js"></script>
+		<script src="/assets/controls/table/header/bulk/controller.js"></script>
+		<script src="/assets/controls/table/modal/helper.js"></script>
+		<script src="/assets/controls/table/modal/actions/controller.js"></script>
+		<script src="/assets/controls/table/modal/customize/customers/controller.js"></script>
+		<script src="/assets/controls/table/modal/customize/controller.js"></script>
+		<script src="/assets/controls/table/modal/export/controller.js"></script>
+		<script src="/assets/controls/table/modal/search/customers/controller.js"></script>
+		<script src="/assets/controls/table/pagination/controller.js"></script>
+		<script src="/assets/controls/table/row/expand/controller.js"></script>
+		<script src="/assets/controls/table/row/inline-edit/controller.js"></script>
+
+		<!-- INIT -->
+		<script>
+            $(document).ready(function() {
+
+            	// ASIDE - HEADER
+				$( "#t-aside-header" ).load( "/assets/views/template/aside-header.html", function()		{    });
+
+            	// ASIDE - NAV
+				$( "#t-aside-nav" ).load( "/assets/views/template/aside-nav.html", function()			{    
+					updateMenu("CUSTOMERS");
+				});
+
+	           	// MAIN - HEADER
+				$( "#t-main-header" ).load( "/assets/views/template/main-header.html", function()		{    });
+
+            	// MAIN - CONTENT
+				$( "#t-main-content" ).load( "/assets/views/customers/view.html", function()			{    
+					initCustomers("customers-table");
+				});
+
+            });
+        </script>
+
+
+	</body>
+</html>

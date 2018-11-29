@@ -1,9 +1,22 @@
 // --------------------------------------------------------------------------------
-// CONTROLLER - INVOICES
+// CONTROLLER - INDEX
 //---------------------------------------------------------------------------------
-function initInvoices(target) {
+function initInvoices() {
 
-	// BUILD GRID
-	initTable(gridDataInvoicesSettings, gridDataInvoices, target);
-	
+	var grid = new Muuri('.grid', {
+		dragEnabled: true,
+		dragSortInterval: 0,
+
+		dragSortPredicate: {
+			threshold: 75,
+			action: 'swap'
+		},
+
+		layout: {
+			fillGaps: true
+	  	}
+	});
+
+	grid.refreshItems().layout();
+
 }

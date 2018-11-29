@@ -1,0 +1,147 @@
+// --------------------------------------------------------------------------------
+// TEMPLATE - LAYOUT
+//---------------------------------------------------------------------------------
+.t-main {
+	@include position(absolute, $top: 0, $right: 0, $bottom:0, $left: $aside-width);
+}
+
+.t-main-header {
+	@include j-cf();
+	@include position(absolute, $top: 0, $right: 0, $left: 0);
+
+	background: $main-header-background;
+	height: $main-header-height;
+
+	.t-main-header-item {
+		cursor: pointer;
+		float: right;
+
+		svg {
+			fill: $color-white-100;
+		}
+	}
+
+	.t-main-header-app-cues {
+		padding: $spacing-13 $spacing-13 0 0;
+
+		svg {
+			height: 24px;
+			width: 24px;
+		}
+	}
+
+	.t-main-header-user {
+		@include j-cf();
+
+		padding: 9px $spacing-34 0 0;
+
+		.icon {
+			float: left;
+			margin-right: $spacing-3;
+			margin-top: $spacing-3;
+
+			svg {
+				height: 30px;
+				width: 30px;
+			}
+
+			.icon-circle {
+				fill: $color-blue-200;
+			}
+
+			.icon-person {
+				fill: $color-white-100;
+			}		
+		}
+
+		.info {
+			@include font-size(0.7500); // 12px
+
+			color: $color-white-100;
+			float: left;
+			margin-right: $spacing-8;
+		}
+
+		.arrow {
+			float: left;
+
+			svg {
+				height: 13px;
+				margin-top: $spacing-8;
+				width: 13px;
+			}
+		}
+	}
+
+}
+
+.t-main-content {
+	@include position(absolute, $top: $main-header-height, $right: 0, $bottom: 0, $left: 0);
+
+    background: $main-content-background;    
+}
+
+
+.t-main-content-subheader {
+	@include j-cf();
+	@include position(absolute, $top: 0, $right: 0, $left: 0);
+
+	background: $color-white-100;
+	border-bottom: 1px solid $template-border-color;
+	height: $main-content-subheader-height;
+
+	.lft {
+		@include j-column(8/12);
+
+		padding: $spacing-8;
+
+		.title {
+			@include font-size(1.2750); // 22px
+		}
+
+		.breadcrumbs {
+			@include font-size(0.7500); // 12px
+
+			margin-top: $spacing-5;
+		}
+	}
+
+	.rgt {
+		@include j-cf();
+		@include j-column(4/12);
+
+		padding: $spacing-8 $spacing-13;
+
+		.currency {
+			float: right;
+			margin-top: $spacing-8;
+			width: 100px;
+		}
+
+		.settings {
+			float: right;
+			margin-left: $spacing-13;
+
+			svg {
+				cursor: pointer;
+				display: block;
+				fill: $color-orange-200;
+				height: 24px;
+				margin-top: $spacing-13;
+				width: 24px;
+			}
+		}
+	}
+}
+
+.t-main-content-view {
+	@include position(absolute, $top: $main-content-subheader-height, $right: 0, $bottom: 0, $left: 0);
+}
+
+
+
+
+
+
+
+

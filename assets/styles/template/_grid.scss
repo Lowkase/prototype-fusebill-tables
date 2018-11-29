@@ -15,11 +15,11 @@
 
 .t-grid-50 {
     .lft {
-        @include j-column(6/12);
+        @include j-column(6/12, $gutter: 1);
     }
 
     .rgt {
-        @include j-column(6/12);
+        @include j-column(6/12, $gutter: 1);
 
     }
 }

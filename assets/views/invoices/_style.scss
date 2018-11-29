@@ -1,6 +1,47 @@
 // --------------------------------------------------------------------------------
-// VIEW - INDEX
+// VIEW - INVOICES
 //---------------------------------------------------------------------------------
 .v-invoices {
+	.grid {
+		position: relative;
+	}
 
+	.item {
+		background: $color-blue-200;
+		color: #fff;
+		display: block;
+		height: 100px;
+		margin-bottom: 2%;
+		margin-right: 2%;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.item-50 {
+		width: 48%;
+	}
+
+	.item-100 {
+		width: 98%;
+	}
+
+	.item-content {
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
+
+	.item.muuri-item-dragging {
+		background: red;
+		z-index: 3;
+	}
+
+	.item.muuri-item-releasing {
+		background: green;
+		z-index: 2;
+	}
+
+	.item.muuri-item-hidden {
+		z-index: 0;
+	}
 }

@@ -1,0 +1,114 @@
+// --------------------------------------------------------------------------------
+// TEMPLATE - ASIDE
+//---------------------------------------------------------------------------------
+.t-aside {
+	@include position(absolute, $top: 0, $bottom:0, $left: 0);
+
+	width: $aside-width;
+}
+
+
+.t-aside-header {
+	@include position(absolute, $top: 0, $right: 0, $left: 0);
+
+	background: $aside-header-background;
+	height: $aside-header-height;
+
+	svg {
+		height: 30px;
+		margin-left: $spacing-13;
+		margin-top: 7px;
+		width: 90px;
+	}
+}
+
+
+.t-aside-nav {
+	@include position(absolute, $top: $aside-header-height, $right: 0, $bottom: 0, $left: 0);
+
+	background: $aside-nav-background;
+	border-right: 1px solid $color-light-gray-400;
+
+    overflow-y: auto;
+
+    ul {
+
+	    li {
+		    .primary {
+				@include font-size(0.8750); // 14px
+		    	@include j-cf();
+
+		    	cursor: pointer;
+		    	color: $template-font-color;
+
+		    	.icon {
+		    		float: left;
+					padding: $spacing-8 0 0 $spacing-13;
+
+		    		svg {
+		    			display: block;
+		    			fill: $aside-nav-not-active-color;
+		    			height: 19px;
+		    			width: 19px;
+		    		}
+		    	}
+
+		    	.text {
+		    		float: left;
+		    		padding: $spacing-8 0 $spacing-8 $spacing-8;
+		    	}
+
+		    	.expand {
+					float: right;
+					padding: $spacing-13;
+
+					svg {
+						display: block;
+						fill: $aside-nav-not-active-color;
+						height: 10px;
+						width: 10px;
+					}
+		    	}
+		    	.expand:hover {
+		    		background: $aside-nav-active-color;
+
+					svg {
+						fill: $color-white-100;
+					}
+		    	}
+		    }
+
+		    .secondary {
+		    	@include font-size(0.7500); // 12px
+
+		    	display: none;
+
+		    	li {
+		    		cursor:pointer;
+		    		padding: $spacing-8 $spacing-13 $spacing-8 40px;
+		    	}
+		    	li:hover {
+		    		color: $aside-nav-active-color;
+		    		font-weight: $font-weight-semibold;
+		    	}
+		    }
+	    }
+
+	    li:hover, li.active {
+			.primary {
+		    	.icon {
+		    		svg * {
+		    			fill: $aside-nav-active-color;
+		    		}
+		    	}
+
+		    	.text {
+		    		color: $aside-nav-active-color;
+		    		font-weight: $font-weight-semibold;
+		    	}
+			}
+	    }
+	    
+    }
+
+}

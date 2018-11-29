@@ -11,7 +11,7 @@
 		@include font-size(0.875); // 14px
 	    @include transition(all $transition-timer-400ms $transition-easeInOutQuad);
 
-	    background: $color-white;
+	    background: $oldcolor-white;
 	   	border-radius: 0;
 	    border-style: none;
 	    cursor: pointer;

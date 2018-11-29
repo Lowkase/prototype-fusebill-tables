@@ -26,6 +26,7 @@
 
 
 // MODULES
+@import 'modules/7day-calendar';
 @import 'modules/actions';
 @import 'modules/button';
 @import 'modules/card';
@@ -40,6 +41,7 @@
 @import 'modules/loading';
 @import 'modules/modal';
 @import 'modules/notifications';
+@import 'modules/palette';
 @import 'modules/table';
 @import 'modules/table-button';
 @import 'modules/table-expand';
@@ -59,13 +61,13 @@
 
 
 // TEMPLATE
-@import 'template/wrap';
+@import 'template/aside';
 @import 'template/grid';
-@import 'template/header';
-@import 'template/subheader';
-@import 'template/content';
+@import 'template/main';
+@import 'template/wrap';
 
 
 // VIEWS
 @import '../views/index/style';
+@import '../views/customers/style';
 @import '../views/invoices/style';
